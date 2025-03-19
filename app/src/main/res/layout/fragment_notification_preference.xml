@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Notification Preferences Title -->
+        <TextView
+            android:id="@+id/notification_preferences_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Notification Preferences"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:layout_gravity="center"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Enable/Disable Notifications -->
+        <TextView
+            android:id="@+id/enable_notifications_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Enable Notifications"
+            android:textSize="18sp"
+            android:layout_marginBottom="8dp"/>
+
+        <Switch
+            android:id="@+id/enable_notifications_switch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Notification Type Preferences -->
+        <TextView
+            android:id="@+id/notification_types_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Notification Types"
+            android:textSize="18sp"
+            android:layout_marginBottom="8dp"/>
+
+        <CheckBox
+            android:id="@+id/promo_notifications_checkbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Promotional Notifications"
+            android:checked="true"
+            android:layout_marginBottom="8dp"/>
+
+        <CheckBox
+            android:id="@+id/service_notifications_checkbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Service Notifications"
+            android:checked="true"
+            android:layout_marginBottom="8dp"/>
+
+        <CheckBox
+            android:id="@+id/reminder_notifications_checkbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Reminder Notifications"
+            android:checked="true"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Notification Sound -->
+        <TextView
+            android:id="@+id/notification_sound_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Notification Sound"
+            android:textSize="18sp"
+            android:layout_marginBottom="8dp"/>
+
+        <Spinner
+            android:id="@+id/notification_sound_spinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:entries="@array/notification_sounds"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Vibration Setting -->
+        <TextView
+            android:id="@+id/vibration_setting_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Vibration"
+            android:textSize="18sp"
+            android:layout_marginBottom="8dp"/>
+
+        <Switch
+            android:id="@+id/vibration_switch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Notification Frequency -->
+        <TextView
+            android:id="@+id/notification_frequency_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Notification Frequency"
+            android:textSize="18sp"
+            android:layout_marginBottom="8dp"/>
+
+        <SeekBar
+            android:id="@+id/notification_frequency_seekbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:max="100"
+            android:progress="50"
+            android:layout_marginBottom="16dp"/>
+
+        <TextView
+            android:id="@+id/notification_frequency_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Frequency: Medium"
+            android:layout_gravity="center"
+            android:layout_marginBottom="16dp"/>
+
+    </LinearLayout>
+</ScrollView>

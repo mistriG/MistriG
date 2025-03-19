@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".Fragment.AboutFragment">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/settings_toolbar_background">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="About MistriG"
+            android:fontFamily="@font/montserrat_regular"
+            android:textColor="#000000"
+            android:textSize="18sp">
+
+        </TextView>
+    </com.google.android.material.appbar.MaterialToolbar>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toolbar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- About Content -->
+            <TextView
+                android:id="@+id/about_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Welcome to MistriG, your one-stop solution for all your home service needs. We connect you with trusted and skilled professionals to handle a wide range of services, from plumbing and electrical repairs to cleaning and home maintenance. Our mission is to make your life easier by providing reliable, affordable, and high-quality services at your doorstep."
+                android:textSize="16sp"
+                android:textStyle="italic"
+                android:layout_marginBottom="16dp"/>
+
+            <!-- Services Section -->
+            <TextView
+                android:id="@+id/services_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Our Services Include:"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="8dp"/>
+
+            <TextView
+                android:id="@+id/services_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="- Plumbing: Expert plumbers to fix leaks, clogs, and other plumbing issues.\n- Electrical: Skilled electricians to handle all electrical repairs and installations.\n- Cleaning: Professional cleaning services to keep your home spotless.\n- Maintenance: General home maintenance and repairs by experienced professionals."
+                android:textSize="16sp"
+                android:textStyle="italic"
+                android:layout_marginBottom="16dp"/>
+
+            <!-- Why Choose Us Section -->
+            <TextView
+                android:id="@+id/why_choose_us_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Why Choose MistriG?"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="8dp"/>
+
+            <TextView
+                android:id="@+id/why_choose_us_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="- Verified Professionals: All our service providers are thoroughly vetted and verified for quality and reliability.\n- Easy Booking: Book services through our user-friendly app with just a few taps.\n- Transparent Pricing: Get upfront pricing with no hidden charges, ensuring complete transparency.\n- Customer Support: Our dedicated customer support team is always ready to assist you with any queries or issues."
+                android:textSize="16sp"
+                android:textStyle="italic"
+                android:layout_marginBottom="16dp"/>
+
+            <!-- Join Us Section -->
+            <TextView
+                android:id="@+id/join_us_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Join thousands of satisfied customers who trust MistriG for their home service needs. Download the app today and experience the convenience of professional home services at your fingertips."
+                android:textSize="16sp"
+                android:textStyle="italic"
+                android:layout_marginBottom="16dp"/>
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

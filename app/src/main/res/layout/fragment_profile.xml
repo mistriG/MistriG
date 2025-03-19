@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".Fragment.ProfileFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Profile Header -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/profile_image"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:src="@drawable/ic_profile"
+                android:contentDescription="Profile Image"
+                android:layout_marginEnd="16dp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:id="@+id/profile_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="John Doe"
+                    android:textSize="18sp"
+                    android:layout_marginBottom="4dp" />
+
+                <TextView
+                    android:id="@+id/profile_email"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="john.doe@example.com"
+                    android:layout_marginBottom="8dp" />
+
+                <Button
+                    android:id="@+id/edit_profile_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Edit Profile" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Progress Bar -->
+        <TextView
+            android:id="@+id/progress_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Profile Completion"
+            android:textSize="16sp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="8dp" />
+
+        <ProgressBar
+            android:id="@+id/profile_progress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:progress="70"
+            android:max="100"
+            style="@style/Widget.AppCompat.ProgressBar.Horizontal" />
+
+        <!-- Recent Used Services -->
+        <TextView
+            android:id="@+id/recent_services_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Recent Used Services"
+            android:textSize="16sp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="8dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Example of a Recent Service -->
+            <TextView
+                android:id="@+id/recent_service_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Service 1"
+                android:layout_marginBottom="4dp" />
+
+            <!-- Add more recent services as needed -->
+        </LinearLayout>
+
+        <!-- Coupons Used -->
+        <TextView
+            android:id="@+id/coupons_used_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Coupons Used"
+            android:textSize="16sp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="8dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Example of a Coupon Used -->
+            <TextView
+                android:id="@+id/coupon_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Coupon 1"
+                android:layout_marginBottom="4dp" />
+
+            <!-- Add more coupons as needed -->
+        </LinearLayout>
+
+        <!-- Saved Addresses -->
+        <TextView
+            android:id="@+id/saved_addresses_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Saved Addresses"
+            android:textSize="16sp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="8dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Example of a Saved Address -->
+            <TextView
+                android:id="@+id/address_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="123 Street, City, Country"
+                android:layout_marginBottom="4dp" />
+
+            <!-- Add more saved addresses as needed -->
+        </LinearLayout>
+
+        <!-- Feedback Section -->
+        <TextView
+            android:id="@+id/feedback_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Feedback"
+            android:textSize="16sp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="8dp" />
+
+        <Button
+            android:id="@+id/feedback_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Give Feedback" />
+
+        <!-- Logout Button -->
+        <Button
+            android:id="@+id/logout_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Logout"
+            android:layout_gravity="center"
+            android:layout_marginTop="16dp"
+            android:textColor="@android:color/white" />
+
+    </LinearLayout>
+
+</ScrollView>

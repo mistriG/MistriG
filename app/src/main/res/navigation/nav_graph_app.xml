@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/navigation_home">
+    <fragment
+        android:id="@+id/signInFragment"
+        android:name="com.example.mistrig.Fragment.SignInFragment"
+        android:label="Sign In"
+        tools:layout="@layout/fragment_sign_in">
+
+        <action
+            android:id="@+id/action_signInFragment_to_verificationScreen"
+            app:destination="@id/verificationScreen"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/verificationScreen"
+        android:name="com.example.mistrig.Fragment.VerificationScreen"
+    android:label="Verification Screen"
+    tools:layout="@layout/fragment_verification_screen">
+        <argument
+            android:name="verificationId"
+            app:argType="string" />
+
+    <action
+        android:id="@+id/action_verificationScreen_to_navigation_home"
+        app:destination="@id/navigation_home" />
+</fragment>
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.example.mistrig.Fragment.HomeFragment"
+        android:label="Home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_navigation_home_to_navigation_settings"
+            app:destination="@id/navigation_settings" />
+        <action
+            android:id="@+id/action_navigation_home_to_navigation_wallet"
+            app:destination="@id/navigation_wallet" />
+        <action
+            android:id="@+id/action_navigation_home_to_navigation_search"
+            app:destination="@id/navigation_search" />
+        <action
+            android:id="@+id/action_navigation_home_to_plumberServiceFragment"
+            app:destination="@id/plumberServiceFragment" />
+        <action
+            android:id="@+id/action_navigation_home_to_electricianServiceFragment"
+            app:destination="@id/electricianServiceFragment" />
+        <action
+            android:id="@+id/action_navigation_home_to_carpentryServiceFragment"
+            app:destination="@id/carpentryServiceFragment" />
+        <action
+            android:id="@+id/action_navigation_home_to_paintingServiceFragment"
+            app:destination="@id/paintingServiceFragment" />
+        <action
+            android:id="@+id/action_navigation_home_to_electronicRepairServiceFragment"
+            app:destination="@id/electronicRepairServiceFragment" />
+        <action
+            android:id="@+id/action_navigation_home_to_laundryServiceFragment"
+            app:destination="@id/laundryServiceFragment" />
+        <action
+            android:id="@+id/action_navigation_home_to_welderServiceFragment"
+            app:destination="@id/welderServiceFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_settings"
+        android:name="com.example.mistrig.Fragment.SettingsFragment"
+        android:label="Settings"
+        tools:layout="@layout/fragment_settings" >
+        <action
+            android:id="@+id/action_navigation_settings_to_navigation_home"
+            app:destination="@id/navigation_home" />
+        <action
+            android:id="@+id/action_navigation_settings_to_navigation_wallet"
+            app:destination="@id/navigation_wallet" />
+        <action
+            android:id="@+id/action_navigation_settings_to_navigation_wallet2"
+            app:destination="@id/navigation_wallet" />
+        <action
+            android:id="@+id/action_navigation_settings_to_navigation_search"
+            app:destination="@id/navigation_search" />
+        <action
+            android:id="@+id/action_navigation_settings_to_profileFragment"
+            app:destination="@id/profileFragment" />
+        <action
+            android:id="@+id/action_navigation_settings_to_helpFragment"
+            app:destination="@id/helpFragment" />
+        <action
+            android:id="@+id/action_navigation_settings_to_legalPolicyFragment"
+            app:destination="@id/legalPolicyFragment" />
+        <action
+            android:id="@+id/action_navigation_settings_to_aboutFragment"
+            app:destination="@id/aboutFragment" />
+        <action
+            android:id="@+id/action_navigation_settings_to_notificationPreferenceFragment"
+            app:destination="@id/notificationPreferenceFragment" />
+        <action
+            android:id="@+id/action_navigation_settings_to_resetPasswordFragment"
+            app:destination="@id/resetPasswordFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_wallet"
+        android:name="com.example.mistrig.Fragment.WalletFragment"
+        android:label="Wallet"
+        tools:layout="@layout/fragment_wallet" >
+        <action
+            android:id="@+id/action_navigation_wallet_to_navigation_search"
+            app:destination="@id/navigation_search" />
+        <action
+            android:id="@+id/action_navigation_wallet_to_navigation_settings"
+            app:destination="@id/navigation_settings" />
+        <action
+            android:id="@+id/action_navigation_wallet_to_navigation_home"
+            app:destination="@id/navigation_home" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_search"
+        android:name="com.example.mistrig.Fragment.SearchFragment"
+        android:label="Search"
+        tools:layout="@layout/fragment_search" >
+        <action
+            android:id="@+id/action_navigation_search_to_navigation_wallet"
+            app:destination="@id/navigation_wallet" />
+        <action
+            android:id="@+id/action_navigation_search_to_navigation_settings"
+            app:destination="@id/navigation_settings" />
+        <action
+            android:id="@+id/action_navigation_search_to_navigation_home"
+            app:destination="@id/navigation_home" />
+        <action
+            android:id="@+id/action_navigation_search_to_carpentryServiceFragment"
+            app:destination="@id/carpentryServiceFragment" />
+        <action
+            android:id="@+id/action_navigation_search_to_plumberServiceFragment"
+            app:destination="@id/plumberServiceFragment" />
+        <action
+            android:id="@+id/action_navigation_search_to_electricianServiceFragment"
+            app:destination="@id/electricianServiceFragment" />
+        <action
+            android:id="@+id/action_navigation_search_to_paintingServiceFragment"
+            app:destination="@id/paintingServiceFragment" />
+        <action
+            android:id="@+id/action_navigation_search_to_electronicRepairServiceFragment"
+            app:destination="@id/electronicRepairServiceFragment" />
+        <action
+            android:id="@+id/action_navigation_search_to_laundryServiceFragment"
+            app:destination="@id/laundryServiceFragment" />
+        <action
+            android:id="@+id/action_navigation_search_to_welderServiceFragment"
+            app:destination="@id/welderServiceFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.example.mistrig.Fragment.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" >
+        <action
+            android:id="@+id/action_profileFragment_to_navigation_settings"
+            app:destination="@id/navigation_settings" />
+    </fragment>
+    <fragment
+        android:id="@+id/helpFragment"
+        android:name="com.example.mistrig.Fragment.HelpFragment"
+        android:label="fragment_help"
+        tools:layout="@layout/fragment_help" >
+        <action
+            android:id="@+id/action_helpFragment_to_navigation_settings"
+            app:destination="@id/navigation_settings" />
+    </fragment>
+    <fragment
+        android:id="@+id/legalPolicyFragment"
+        android:name="com.example.mistrig.Fragment.LegalPolicyFragment"
+        android:label="fragment_legal_policy"
+        tools:layout="@layout/fragment_legal_policy" >
+        <action
+            android:id="@+id/action_legalPolicyFragment_to_navigation_settings"
+            app:destination="@id/navigation_settings" />
+    </fragment>
+    <fragment
+        android:id="@+id/aboutFragment"
+        android:name="com.example.mistrig.Fragment.AboutFragment"
+        android:label="fragment_about"
+        tools:layout="@layout/fragment_about" >
+        <action
+            android:id="@+id/action_aboutFragment_to_navigation_settings"
+            app:destination="@id/navigation_settings" />
+    </fragment>
+    <fragment
+        android:id="@+id/notificationPreferenceFragment"
+        android:name="com.example.mistrig.Fragment.NotificationPreferenceFragment"
+        android:label="NotificationPreferenceFragment" >
+        <action
+            android:id="@+id/action_notificationPreferenceFragment_to_navigation_settings"
+            app:destination="@id/navigation_settings" />
+    </fragment>
+    <fragment
+        android:id="@+id/resetPasswordFragment"
+        android:name="com.example.mistrig.Fragment.ResetPasswordFragment"
+        android:label="fragment_reset_password"
+        tools:layout="@layout/fragment_reset_password" >
+        <action
+            android:id="@+id/action_resetPasswordFragment_to_navigation_settings"
+            app:destination="@id/navigation_settings" />
+        <action
+            android:id="@+id/action_resetPasswordFragment_to_createNewPasswordFragment"
+            app:destination="@id/createNewPasswordFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/createNewPasswordFragment"
+        android:name="com.example.mistrig.Fragment.CreateNewPasswordFragment"
+        android:label="fragment_create_new_password"
+        tools:layout="@layout/fragment_create_new_password" >
+        <action
+            android:id="@+id/action_createNewPasswordFragment_to_resetPasswordFragment"
+            app:destination="@id/resetPasswordFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/plumberServiceFragment"
+        android:name="com.example.mistrig.PlumberServiceFragment"
+        android:label="PlumberServiceFragment" >
+        <action
+            android:id="@+id/action_plumberServiceFragment_to_navigation_home"
+            app:destination="@id/navigation_home" />
+        <action
+            android:id="@+id/action_plumberServiceFragment_to_navigation_search"
+            app:destination="@id/navigation_search" />
+    </fragment>
+    <fragment
+        android:id="@+id/electricianServiceFragment"
+        android:name="com.example.mistrig.ElectricianServiceFragment"
+        android:label="ElectricianServiceFragment" >
+        <action
+            android:id="@+id/action_electricianServiceFragment_to_navigation_home"
+            app:destination="@id/navigation_home" />
+        <action
+            android:id="@+id/action_electricianServiceFragment_to_navigation_search"
+            app:destination="@id/navigation_search" />
+    </fragment>
+    <fragment
+        android:id="@+id/carpentryServiceFragment"
+        android:name="com.example.mistrig.CarpentryServiceFragment"
+        android:label="CarpentryServiceFragment" >
+        <action
+            android:id="@+id/action_carpentryServiceFragment_to_navigation_home"
+            app:destination="@id/navigation_home" />
+        <action
+            android:id="@+id/action_carpentryServiceFragment_to_navigation_search"
+            app:destination="@id/navigation_search" />
+    </fragment>
+    <fragment
+        android:id="@+id/paintingServiceFragment"
+        android:name="com.example.mistrig.PaintingServiceFragment"
+        android:label="PaintingServiceFragment" >
+        <action
+            android:id="@+id/action_paintingServiceFragment_to_navigation_home"
+            app:destination="@id/navigation_home" />
+        <action
+            android:id="@+id/action_paintingServiceFragment_to_navigation_search"
+            app:destination="@id/navigation_search" />
+    </fragment>
+    <fragment
+        android:id="@+id/electronicRepairServiceFragment"
+        android:name="com.example.mistrig.ElectronicRepairServiceFragment"
+        android:label="ElectronicRepairServiceFragment" >
+        <action
+            android:id="@+id/action_electronicRepairServiceFragment_to_navigation_home"
+            app:destination="@id/navigation_home" />
+        <action
+            android:id="@+id/action_electronicRepairServiceFragment_to_navigation_search"
+            app:destination="@id/navigation_search" />
+    </fragment>
+    <fragment
+        android:id="@+id/laundryServiceFragment"
+        android:name="com.example.mistrig.LaundryServiceFragment"
+        android:label="LaundryServiceFragment" >
+        <action
+            android:id="@+id/action_laundryServiceFragment_to_navigation_home"
+            app:destination="@id/navigation_home" />
+        <action
+            android:id="@+id/action_laundryServiceFragment_to_navigation_search"
+            app:destination="@id/navigation_search" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/welderServiceFragment"
+        android:name="com.example.mistrig.WelderServiceFragment"
+        android:label="WelderServiceFragment" >
+        <action
+            android:id="@+id/action_welderServiceFragment_to_navigation_home"
+            app:destination="@id/navigation_home" />
+        <action
+            android:id="@+id/action_welderServiceFragment_to_navigation_search"
+            app:destination="@id/navigation_search" />
+    </fragment>
+</navigation>

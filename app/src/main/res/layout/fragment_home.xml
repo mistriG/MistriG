@@ -1,0 +1,1086 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="#f2f0ef"
+    tools:context=".Fragment.HomeFragment">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/settings_toolbar_background">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/logo"
+            android:layout_marginStart="20dp"
+            android:layout_alignParentStart="true"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Mistri G"
+            android:textStyle="bold|italic"
+            android:layout_centerInParent="true"
+            android:fontFamily="@font/montserrat_regular"
+            android:textColor="#000000"
+            android:textSize="25sp">
+
+        </TextView>
+        </RelativeLayout>
+    </com.google.android.material.appbar.MaterialToolbar>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:background="@color/background_color">
+
+
+
+            <!-- Carousel Section -->
+            <ViewFlipper
+                android:id="@+id/carousel_view_flipper"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:autoStart="true"
+                android:flipInterval="3000">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/banner1" />
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/banner2" />
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/banner3" />
+            </ViewFlipper>
+
+            <!-- Welcome Text -->
+            <TextView
+                android:id="@+id/welcome_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Welcome to Mistri G!"
+                android:textSize="24sp"
+                android:textColor="@color/primary_text"
+                android:layout_marginTop="16dp"
+                android:textStyle="bold"/>
+
+            <!-- Description Text -->
+            <TextView
+                android:id="@+id/description_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Explore our app and get what you need."
+                android:textSize="16sp"
+                android:textColor="@color/secondary_text"
+                android:layout_marginTop="8dp"/>
+
+            <!-- Get Started Button -->
+            <Button
+                android:id="@+id/get_started_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Get Started"
+                android:backgroundTint="@color/button_color"
+                android:textColor="@android:color/white"
+                android:layout_marginTop="24dp"/>
+
+            <!-- Featured Section Title -->
+            <TextView
+                android:id="@+id/feature_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Services"
+                android:textSize="20sp"
+                android:textColor="@color/primary_text"
+                android:layout_marginTop="32dp"
+                android:textStyle="bold"/>
+
+            <!-- Horizontal Scrollable Featured Section -->
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/horizontal_scrollview_background"
+                android:padding="18dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <!-- Feature Card 1 -->
+                    <LinearLayout
+                        android:id="@+id/btn_plumber_service"
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="16dp"
+                        android:background="@drawable/card_background"
+                        android:layout_marginEnd="16dp">
+
+                        <ImageView
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:src="@drawable/img_plumbing_service"
+                            android:layout_gravity="center"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Plumbing Services"
+                            android:textSize="16sp"
+                            android:textColor="@color/primary_text"
+                            android:layout_marginTop="8dp"
+                            android:textAlignment="center"/>
+                    </LinearLayout>
+
+                    <!-- Feature Card 2 -->
+                    <LinearLayout
+                        android:id="@+id/btn_electrician_services"
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="16dp"
+                        android:background="@drawable/card_background"
+                        android:layout_marginEnd="16dp">
+
+                        <ImageView
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:src="@drawable/img_electrician_service"
+                            android:layout_gravity="center"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Electrician Services"
+                            android:textSize="16sp"
+                            android:textColor="@color/primary_text"
+                            android:layout_marginTop="8dp"
+                            android:textAlignment="center"/>
+                    </LinearLayout>
+
+                    <!-- Feature Card 3 -->
+                    <LinearLayout
+                        android:id="@+id/btn_carpentry_service"
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="16dp"
+                        android:background="@drawable/card_background"
+                        android:layout_marginEnd="16dp">
+
+                        <ImageView
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:src="@drawable/img_carpentry_service"
+                            android:layout_gravity="center"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Carpentry Services"
+                            android:textSize="16sp"
+                            android:textColor="@color/primary_text"
+                            android:layout_marginTop="8dp"
+                            android:textAlignment="center"/>
+                    </LinearLayout>
+
+                    <!-- Feature Card 4 -->
+                    <LinearLayout
+                        android:id="@+id/btn_painting_service"
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="16dp"
+                        android:background="@drawable/card_background"
+                        android:layout_marginEnd="16dp">
+
+                        <ImageView
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:src="@drawable/img_painting_service"
+                            android:layout_gravity="center"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Painting Services"
+                            android:textSize="16sp"
+                            android:textColor="@color/primary_text"
+                            android:layout_marginTop="8dp"
+                            android:textAlignment="center"/>
+                    </LinearLayout>
+
+                    <!-- Feature Card 5 -->
+                    <LinearLayout
+                        android:id="@+id/btn_electronic_service"
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="16dp"
+                        android:background="@drawable/card_background"
+                        android:layout_marginEnd="16dp">
+
+                        <ImageView
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:src="@drawable/img_electronic_service"
+                            android:layout_gravity="center"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Electronic Repair"
+                            android:textSize="16sp"
+                            android:textColor="@color/primary_text"
+                            android:layout_marginTop="8dp"
+                            android:textAlignment="center"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/btn_laundry_service"
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="16dp"
+                        android:background="@drawable/card_background"
+                        android:layout_marginEnd="16dp">
+
+                        <ImageView
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:src="@drawable/img_laundry_service"
+                            android:layout_gravity="center"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Laundry Services"
+                            android:textSize="16sp"
+                            android:textColor="@color/primary_text"
+                            android:layout_marginTop="8dp"
+                            android:textAlignment="center"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/btn_welder"
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="16dp"
+                        android:background="@drawable/card_background"
+                        android:layout_marginEnd="16dp">
+
+                        <ImageView
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:src="@drawable/img_welder"
+                            android:layout_gravity="center"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Welder"
+                            android:textSize="16sp"
+                            android:textColor="@color/primary_text"
+                            android:layout_marginTop="8dp"
+                            android:textAlignment="center"/>
+                    </LinearLayout>
+
+
+                </LinearLayout>
+            </HorizontalScrollView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Top crew"
+                android:textSize="20sp"
+                android:textColor="@color/primary_text"
+                android:layout_marginTop="32dp"
+                android:textStyle="bold"/>
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/horizontal_scrollview_background"
+                android:padding="18dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <!-- Feature Card 1 -->
+                    <LinearLayout
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="16dp"
+                        android:background="@drawable/card_background"
+                        android:layout_marginEnd="16dp">
+
+                        <ImageView
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:src="@drawable/ic_feature1"
+                            android:layout_gravity="center"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Crew 1"
+                            android:textSize="16sp"
+                            android:textColor="@color/primary_text"
+                            android:layout_marginTop="8dp"
+                            android:textAlignment="center"/>
+                    </LinearLayout>
+
+                    <!-- Feature Card 2 -->
+                    <LinearLayout
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="16dp"
+                        android:background="@drawable/card_background"
+                        android:layout_marginEnd="16dp">
+
+                        <ImageView
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:src="@drawable/ic_feature2"
+                            android:layout_gravity="center"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Crew 2"
+                            android:textSize="16sp"
+                            android:textColor="@color/primary_text"
+                            android:layout_marginTop="8dp"
+                            android:textAlignment="center"/>
+                    </LinearLayout>
+
+                    <!-- Feature Card 3 -->
+                    <LinearLayout
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="16dp"
+                        android:background="@drawable/card_background"
+                        android:layout_marginEnd="16dp">
+
+                        <ImageView
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:src="@drawable/ic_feature3"
+                            android:layout_gravity="center"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Crew 3"
+                            android:textSize="16sp"
+                            android:textColor="@color/primary_text"
+                            android:layout_marginTop="8dp"
+                            android:textAlignment="center"/>
+                    </LinearLayout>
+
+                    <!-- Feature Card 4 -->
+                    <LinearLayout
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="16dp"
+                        android:background="@drawable/card_background"
+                        android:layout_marginEnd="16dp">
+
+                        <ImageView
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:src="@drawable/ic_feature3"
+                            android:layout_gravity="center"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Crew 4"
+                            android:textSize="16sp"
+                            android:textColor="@color/primary_text"
+                            android:layout_marginTop="8dp"
+                            android:textAlignment="center"/>
+                    </LinearLayout>
+
+                    <!-- Feature Card 5 -->
+                    <LinearLayout
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="16dp"
+                        android:background="@drawable/card_background"
+                        android:layout_marginEnd="16dp">
+
+                        <ImageView
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:src="@drawable/ic_feature3"
+                            android:layout_gravity="center"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Crew 5"
+                            android:textSize="16sp"
+                            android:textColor="@color/primary_text"
+                            android:layout_marginTop="8dp"
+                            android:textAlignment="center"/>
+                    </LinearLayout>
+
+                    <!-- Feature Card 6 -->
+                    <LinearLayout
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="16dp"
+                        android:background="@drawable/card_background"
+                        android:layout_marginEnd="16dp">
+
+                        <ImageView
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:src="@drawable/ic_feature3"
+                            android:layout_gravity="center"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Crew 6"
+                            android:textSize="16sp"
+                            android:textColor="@color/primary_text"
+                            android:layout_marginTop="8dp"
+                            android:textAlignment="center"/>
+                    </LinearLayout>
+
+                </LinearLayout>
+            </HorizontalScrollView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Common Questions"
+                android:textSize="20sp"
+                android:textColor="@color/primary_text"
+                android:layout_marginTop="32dp"
+                android:textStyle="bold"/>
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/horizontal_scrollview_background"
+                android:padding="18dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <!-- Feature Card 1 -->
+                    <LinearLayout
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="16dp"
+                        android:background="@drawable/card_background"
+                        android:layout_marginEnd="16dp">
+
+                        <ImageView
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:src="@drawable/ic_feature1"
+                            android:layout_gravity="center"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Question 1"
+                            android:textSize="16sp"
+                            android:textColor="@color/primary_text"
+                            android:layout_marginTop="8dp"
+                            android:textAlignment="center"/>
+                    </LinearLayout>
+
+                    <!-- Feature Card 2 -->
+                    <LinearLayout
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="16dp"
+                        android:background="@drawable/card_background"
+                        android:layout_marginEnd="16dp">
+
+                        <ImageView
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:src="@drawable/ic_feature2"
+                            android:layout_gravity="center"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Question 2"
+                            android:textSize="16sp"
+                            android:textColor="@color/primary_text"
+                            android:layout_marginTop="8dp"
+                            android:textAlignment="center"/>
+                    </LinearLayout>
+
+                    <!-- Feature Card 3 -->
+                    <LinearLayout
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="16dp"
+                        android:background="@drawable/card_background"
+                        android:layout_marginEnd="16dp">
+
+                        <ImageView
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:src="@drawable/ic_feature3"
+                            android:layout_gravity="center"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Question 3"
+                            android:textSize="16sp"
+                            android:textColor="@color/primary_text"
+                            android:layout_marginTop="8dp"
+                            android:textAlignment="center"/>
+                    </LinearLayout>
+
+                    <!-- Feature Card 4 -->
+                    <LinearLayout
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="16dp"
+                        android:background="@drawable/card_background"
+                        android:layout_marginEnd="16dp">
+
+                        <ImageView
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:src="@drawable/ic_feature3"
+                            android:layout_gravity="center"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Question 4"
+                            android:textSize="16sp"
+                            android:textColor="@color/primary_text"
+                            android:layout_marginTop="8dp"
+                            android:textAlignment="center"/>
+                    </LinearLayout>
+
+                    <!-- Feature Card 5 -->
+                    <LinearLayout
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="16dp"
+                        android:background="@drawable/card_background"
+                        android:layout_marginEnd="16dp">
+
+                        <ImageView
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:src="@drawable/ic_feature3"
+                            android:layout_gravity="center"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Question 5"
+                            android:textSize="16sp"
+                            android:textColor="@color/primary_text"
+                            android:layout_marginTop="8dp"
+                            android:textAlignment="center"/>
+                    </LinearLayout>
+
+                    <!-- Feature Card 6 -->
+                    <LinearLayout
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="16dp"
+                        android:background="@drawable/card_background"
+                        android:layout_marginEnd="16dp">
+
+                        <ImageView
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:src="@drawable/ic_feature3"
+                            android:layout_gravity="center"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Question 6"
+                            android:textSize="16sp"
+                            android:textColor="@color/primary_text"
+                            android:layout_marginTop="8dp"
+                            android:textAlignment="center"/>
+                    </LinearLayout>
+
+                </LinearLayout>
+            </HorizontalScrollView>
+
+            <!-- Testimonials Section Title -->
+            <TextView
+                android:id="@+id/testimonial_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Our Vision"
+                android:textSize="20sp"
+                android:textColor="@color/primary_text"
+                android:layout_marginTop="32dp"
+                android:textStyle="bold"/>
+
+            <!-- Testimonial Text -->
+            <TextView
+                android:id="@+id/testimonial_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="“This app has changed my life for the better!”"
+                android:textSize="16sp"
+                android:textColor="@color/secondary_text"
+                android:layout_marginTop="8dp"
+                android:textAlignment="center"
+                android:padding="16dp"
+                android:background="@drawable/testimonial_background"/>
+
+            <!-- News Section Title -->
+            <TextView
+                android:id="@+id/news_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Latest News"
+                android:textSize="20sp"
+                android:textColor="@color/primary_text"
+                android:layout_marginTop="32dp"
+                android:textStyle="bold"/>
+
+            <!-- News Items -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="16dp">
+
+                <!-- News Item 1 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="16dp"
+                    android:background="@drawable/card_background"
+                    android:layout_marginBottom="16dp">
+
+                    <ImageView
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:src="@drawable/ic_news1"
+                        android:layout_gravity="center"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="16dp"
+                        android:text="News Item 1"
+                        android:textSize="16sp"
+                        android:textColor="@color/secondary_text"/>
+                </LinearLayout>
+
+                <!-- News Item 2 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="16dp"
+                    android:background="@drawable/card_background"
+                    android:layout_marginBottom="16dp">
+
+                    <ImageView
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:src="@drawable/ic_news2"
+                        android:layout_gravity="center"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="16dp"
+                        android:text="News Item 2"
+                        android:textSize="16sp"
+                        android:textColor="@color/secondary_text"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="16dp"
+                    android:background="@drawable/card_background"
+                    android:layout_marginBottom="16dp">
+
+                    <ImageView
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:src="@drawable/ic_news2"
+                        android:layout_gravity="center"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="16dp"
+                        android:text="News Item 3"
+                        android:textSize="16sp"
+                        android:textColor="@color/secondary_text"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="16dp"
+                    android:background="@drawable/card_background"
+                    android:layout_marginBottom="16dp">
+
+                    <ImageView
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:src="@drawable/ic_news2"
+                        android:layout_gravity="center"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="16dp"
+                        android:text="News Item 4"
+                        android:textSize="16sp"
+                        android:textColor="@color/secondary_text"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="16dp"
+                    android:background="@drawable/card_background"
+                    android:layout_marginBottom="16dp">
+
+                    <ImageView
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:src="@drawable/ic_news2"
+                        android:layout_gravity="center"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="16dp"
+                        android:text="News Item 5"
+                        android:textSize="16sp"
+                        android:textColor="@color/secondary_text"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="16dp"
+                    android:background="@drawable/card_background"
+                    android:layout_marginBottom="16dp">
+
+                    <ImageView
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:src="@drawable/ic_news2"
+                        android:layout_gravity="center"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="16dp"
+                        android:text="News Item 6"
+                        android:textSize="16sp"
+                        android:textColor="@color/secondary_text"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="16dp"
+                    android:background="@drawable/card_background"
+                    android:layout_marginBottom="16dp">
+
+                    <ImageView
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:src="@drawable/ic_news2"
+                        android:layout_gravity="center"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="16dp"
+                        android:text="News Item 7"
+                        android:textSize="16sp"
+                        android:textColor="@color/secondary_text"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="16dp"
+                    android:background="@drawable/card_background"
+                    android:layout_marginBottom="16dp">
+
+                    <ImageView
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:src="@drawable/ic_news2"
+                        android:layout_gravity="center"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="16dp"
+                        android:text="News Item 8"
+                        android:textSize="16sp"
+                        android:textColor="@color/secondary_text"/>
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Recent Feedback"
+                    android:textSize="20sp"
+                    android:textColor="@color/primary_text"
+                    android:layout_marginTop="32dp"
+                    android:textStyle="bold"/>
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:background="@drawable/horizontal_scrollview_background"
+                    android:padding="18dp">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <!-- Feature Card 1 -->
+                        <LinearLayout
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:padding="16dp"
+                            android:background="@drawable/card_background"
+                            android:layout_marginEnd="16dp">
+
+                            <ImageView
+                                android:layout_width="48dp"
+                                android:layout_height="48dp"
+                                android:src="@drawable/ic_feature1"
+                                android:layout_gravity="center"/>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Question 1"
+                                android:textSize="16sp"
+                                android:textColor="@color/primary_text"
+                                android:layout_marginTop="8dp"
+                                android:textAlignment="center"/>
+                        </LinearLayout>
+
+                        <!-- Feature Card 2 -->
+                        <LinearLayout
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:padding="16dp"
+                            android:background="@drawable/card_background"
+                            android:layout_marginEnd="16dp">
+
+                            <ImageView
+                                android:layout_width="48dp"
+                                android:layout_height="48dp"
+                                android:src="@drawable/ic_feature2"
+                                android:layout_gravity="center"/>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Question 2"
+                                android:textSize="16sp"
+                                android:textColor="@color/primary_text"
+                                android:layout_marginTop="8dp"
+                                android:textAlignment="center"/>
+                        </LinearLayout>
+
+                        <!-- Feature Card 3 -->
+                        <LinearLayout
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:padding="16dp"
+                            android:background="@drawable/card_background"
+                            android:layout_marginEnd="16dp">
+
+                            <ImageView
+                                android:layout_width="48dp"
+                                android:layout_height="48dp"
+                                android:src="@drawable/ic_feature3"
+                                android:layout_gravity="center"/>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Question 3"
+                                android:textSize="16sp"
+                                android:textColor="@color/primary_text"
+                                android:layout_marginTop="8dp"
+                                android:textAlignment="center"/>
+                        </LinearLayout>
+
+                        <!-- Feature Card 4 -->
+                        <LinearLayout
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:padding="16dp"
+                            android:background="@drawable/card_background"
+                            android:layout_marginEnd="16dp">
+
+                            <ImageView
+                                android:layout_width="48dp"
+                                android:layout_height="48dp"
+                                android:src="@drawable/ic_feature3"
+                                android:layout_gravity="center"/>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Question 4"
+                                android:textSize="16sp"
+                                android:textColor="@color/primary_text"
+                                android:layout_marginTop="8dp"
+                                android:textAlignment="center"/>
+                        </LinearLayout>
+
+                        <!-- Feature Card 5 -->
+                        <LinearLayout
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:padding="16dp"
+                            android:background="@drawable/card_background"
+                            android:layout_marginEnd="16dp">
+
+                            <ImageView
+                                android:layout_width="48dp"
+                                android:layout_height="48dp"
+                                android:src="@drawable/ic_feature3"
+                                android:layout_gravity="center"/>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Question 5"
+                                android:textSize="16sp"
+                                android:textColor="@color/primary_text"
+                                android:layout_marginTop="8dp"
+                                android:textAlignment="center"/>
+                        </LinearLayout>
+
+                        <!-- Feature Card 6 -->
+                        <LinearLayout
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:padding="16dp"
+                            android:background="@drawable/card_background"
+                            android:layout_marginEnd="16dp">
+
+                            <ImageView
+                                android:layout_width="48dp"
+                                android:layout_height="48dp"
+                                android:src="@drawable/ic_feature3"
+                                android:layout_gravity="center"/>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Question 6"
+                                android:textSize="16sp"
+                                android:textColor="@color/primary_text"
+                                android:layout_marginTop="8dp"
+                                android:textAlignment="center"/>
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </HorizontalScrollView>
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f2f0ef"
+    tools:context=".Fragment.SettingsFragment">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/settings_toolbar_background">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/settings"
+                android:fontFamily="@font/montserrat_regular"
+                android:textColor="#000000"
+                android:textSize="18sp">
+
+            </TextView>
+        </com.google.android.material.appbar.MaterialToolbar>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/toolbar"
+            android:padding="20dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/profile_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="10dp"
+                    android:paddingEnd="20dp"
+                    android:paddingStart="20dp"
+                    android:background="@drawable/seen_notification_background">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/profile_icon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_profile"
+                        android:layout_marginStart="10dp"
+                        android:layout_centerInParent="true"
+                        android:layout_alignParentStart="true"/>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/txt_notification"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:text="Profile"
+                        android:layout_toEndOf="@id/profile_icon"
+                        android:textColor="#3A3A3A"
+                        android:layout_margin="10dp"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:textSize="14sp"/>
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/notification_arrow"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/right_arrow"
+                        android:layout_centerInParent="true"
+                        android:layout_alignParentEnd="true"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/btn_reset_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="10dp"
+                    android:paddingEnd="20dp"
+                    android:paddingStart="20dp"
+                    android:background="@drawable/seen_notification_background">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/password_icon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_change_password"
+                        android:layout_marginStart="10dp"
+                        android:layout_centerInParent="true"
+                        android:layout_alignParentStart="true"/>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:text="Change Password"
+                        android:layout_toEndOf="@id/password_icon"
+                        android:textColor="#3A3A3A"
+                        android:layout_margin="10dp"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:textSize="14sp"/>
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/right_arrow"
+                        android:layout_centerInParent="true"
+                        android:layout_alignParentEnd="true"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/btn_notification_preference"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="10dp"
+                    android:paddingEnd="20dp"
+                    android:paddingStart="20dp"
+                    android:background="@drawable/seen_notification_background">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/notification_icon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_notification"
+                        android:layout_marginStart="10dp"
+                        android:layout_centerInParent="true"
+                        android:layout_alignParentStart="true"/>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:text="Notification Preferences"
+                        android:layout_toEndOf="@id/notification_icon"
+                        android:textColor="#3A3A3A"
+                        android:layout_margin="10dp"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:textSize="14sp"/>
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/right_arrow"
+                        android:layout_centerInParent="true"
+                        android:layout_alignParentEnd="true"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/btn_help_and_support"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="10dp"
+                    android:paddingEnd="20dp"
+                    android:paddingStart="20dp"
+                    android:background="@drawable/seen_notification_background">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/help_icon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_help"
+                        android:layout_marginStart="10dp"
+                        android:layout_centerInParent="true"
+                        android:layout_alignParentStart="true"/>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:text="Help and Support"
+                        android:layout_toEndOf="@id/help_icon"
+                        android:textColor="#3A3A3A"
+                        android:layout_margin="10dp"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:textSize="14sp"/>
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/right_arrow"
+                        android:layout_centerInParent="true"
+                        android:layout_alignParentEnd="true"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/btn_legal_policy"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="10dp"
+                    android:paddingEnd="20dp"
+                    android:paddingStart="20dp"
+                    android:background="@drawable/seen_notification_background">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/legal_icon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_legal_policy"
+                        android:layout_marginStart="10dp"
+                        android:layout_centerInParent="true"
+                        android:layout_alignParentStart="true"/>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:text="Legal Policy"
+                        android:layout_toEndOf="@id/legal_icon"
+                        android:textColor="#3A3A3A"
+                        android:layout_margin="10dp"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:textSize="14sp"/>
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/right_arrow"
+                        android:layout_centerInParent="true"
+                        android:layout_alignParentEnd="true"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/btn_about"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="10dp"
+                    android:paddingEnd="20dp"
+                    android:paddingStart="20dp"
+                    android:background="@drawable/seen_notification_background">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/about_icon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_about_us"
+                        android:layout_marginStart="10dp"
+                        android:layout_centerInParent="true"
+                        android:layout_alignParentStart="true"/>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:text="About Us"
+                        android:layout_toEndOf="@id/about_icon"
+                        android:textColor="#3A3A3A"
+                        android:layout_margin="10dp"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:textSize="14sp"/>
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/right_arrow"
+                        android:layout_centerInParent="true"
+                        android:layout_alignParentEnd="true"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/btn_logout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="10dp"
+                    android:paddingEnd="20dp"
+                    android:paddingStart="20dp"
+                    android:background="@drawable/seen_notification_background">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/logout_icon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_log_out"
+                        android:layout_marginStart="10dp"
+                        android:layout_centerInParent="true"
+                        android:layout_alignParentStart="true"/>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:text="Log Out"
+                        android:layout_toEndOf="@id/logout_icon"
+                        android:textColor="#3A3A3A"
+                        android:layout_margin="10dp"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:textSize="14sp"/>
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/right_arrow"
+                        android:layout_centerInParent="true"
+                        android:layout_alignParentEnd="true"/>
+                </RelativeLayout>
+
+
+
+
+
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </RelativeLayout>
+
+
+
+</FrameLayout>

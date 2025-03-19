@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragment.LegalPolicyFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/settings_toolbar_background">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Legal Policy"
+                android:fontFamily="@font/montserrat_regular"
+                android:textColor="#000000"
+                android:textSize="18sp">
+
+            </TextView>
+        </com.google.android.material.appbar.MaterialToolbar>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/toolbar">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:id="@+id/terms_of_service_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Terms of Service"
+                    android:textStyle="bold"
+                    android:textSize="18sp"
+                    android:layout_marginBottom="8dp"/>
+
+                <TextView
+                    android:id="@+id/terms_of_service_content"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="This section outlines the responsibilities and rights of the company, including usage rules for the app. It typically covers aspects like user conduct, prohibited activities, content ownership, account termination, and any warranties or disclaimers provided by the company."
+                    android:textSize="16sp"
+                    android:layout_marginBottom="16dp"/>
+
+                <TextView
+                    android:id="@+id/privacy_policy_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Privacy Policy"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="8dp"/>
+
+                <TextView
+                    android:id="@+id/privacy_policy_content"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="This policy explains how the company collects, uses, stores, and protects user data. It emphasizes transparency in data handling practices, detailing what information is collected, how it is used, who it is shared with, and the measures taken to ensure data security."
+                    android:textSize="16sp"
+                    android:layout_marginBottom="16dp"/>
+
+                <TextView
+                    android:id="@+id/legal_disclaimer_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Legal Disclaimer"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="8dp"/>
+
+                <TextView
+                    android:id="@+id/legal_disclaimer_content"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="The legal disclaimer outlines the app's limitations of liability. It clarifies that the company is not responsible for any damages or losses that may occur from using the app, and it limits the company's legal exposure by setting expectations about the app's performance and reliability."
+                    android:textSize="16sp"
+                    android:layout_marginBottom="16dp"/>
+
+                <TextView
+                    android:id="@+id/user_agreement_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="User Agreement"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="8dp"/>
+
+                <TextView
+                    android:id="@+id/user_agreement_content"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="The user agreement is a contract between the user and the company, covering the terms and conditions of app usage. It includes rules and guidelines that users must adhere to, such as age restrictions, acceptable use policies, dispute resolution processes, and any other legal obligations of both parties.These documents are essential for establishing clear and transparent guidelines for both the company and its users, ensuring a mutually understood and legally compliant relationship."
+                    android:textSize="16sp"
+                    android:layout_marginBottom="16dp"/>
+
+
+                <TextView
+                    android:id="@+id/additional_features_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Additional Features"
+                    android:textStyle="bold"
+                    android:textSize="18sp"
+                    android:layout_marginBottom="8dp"/>
+
+                <TextView
+                    android:id="@+id/additional_features_content"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="This section highlights any other legal information relevant to the app that hasn't been covered in the main sections. It could include details about updates to the legal terms, specific user rights under applicable laws, how disputes are resolved, or any special programs or features offered by the app that require additional legal disclosure. This section ensures comprehensive coverage of all legal aspects, providing users with a clear understanding of their rights and responsibilities."
+                    android:textSize="16dp"
+                    android:layout_marginBottom="16dp"/>
+
+                <TextView
+                    android:id="@+id/contact_information_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Contact Information"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="8dp"/>
+
+                <TextView
+                    android:id="@+id/contact_information_content"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="This section provides the necessary details for users to get in touch with the company's legal team or customer support for any legal inquiries. It usually includes an email address, phone number, and sometimes a physical address. Ensuring users have clear and easy access to contact information reinforces transparency and trust, allowing users to seek clarification or assistance when needed. For example, For any legal inquiries, contact us at legal@example.com or call +1 234 567 890.  These sections are important for providing a complete and transparent view of the legal framework governing the app's use and ensuring users have the information they need to resolve any concerns or questions."
+                    android:textSize="16sp"
+                    android:layout_marginBottom="16dp"/>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+
+    </RelativeLayout>
+
+</FrameLayout>
