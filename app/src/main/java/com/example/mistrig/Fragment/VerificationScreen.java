@@ -32,7 +32,7 @@ public class VerificationScreen extends Fragment {
     private String verificationId;
 
     public VerificationScreen() {
-        // Required empty public constructor
+
     }
 
     public static VerificationScreen newInstance(String verificationId) {
