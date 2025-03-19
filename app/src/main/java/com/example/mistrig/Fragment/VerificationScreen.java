@@ -67,7 +67,7 @@ public class VerificationScreen extends Fragment {
         btnContinue = view.findViewById(R.id.btn_continue);
         txtResend = view.findViewById(R.id.txt_resend);
 
-        // Auto move cursor
+
         for (int i = 0; i < otpInputs.length; i++) {
             final int index = i;
             otpInputs[i].addTextChangedListener(new TextWatcher() {
@@ -88,7 +88,7 @@ public class VerificationScreen extends Fragment {
             });
         }
 
-        // Continue button click event
+
         btnContinue.setOnClickListener(v -> {
             StringBuilder otpCode = new StringBuilder();
             for (EditText otpInput : otpInputs) {
@@ -101,10 +101,10 @@ public class VerificationScreen extends Fragment {
             verifyCode(otpCode.toString());
         });
 
-        // Resend OTP click event
+
         txtResend.setOnClickListener(v -> {
             Toast.makeText(getContext(), "Resending OTP...", Toast.LENGTH_SHORT).show();
-            // Logic to resend OTP
+
         });
 
         return view;
@@ -124,12 +124,12 @@ public class VerificationScreen extends Fragment {
                 if (task.isSuccessful()) {
                     Toast.makeText(getContext(), "Verification Successful!", Toast.LENGTH_SHORT).show();
 
-                    // Open HomeFragment using FragmentManager and FragmentTransaction
+
                     HomeFragment homeFragment = new HomeFragment();
                     FragmentManager fragmentManager = requireActivity().getSupportFragmentManager();
                     FragmentTransaction transaction = fragmentManager.beginTransaction();
-                    transaction.replace(R.id.fragment_container, homeFragment); // Replace with your container ID
-                    transaction.addToBackStack(null); // Optional: Add to back stack
+                    transaction.replace(R.id.fragment_container, homeFragment);
+                    transaction.addToBackStack(null);
                     transaction.commit();
                 } else {
                     Toast.makeText(getContext(), "Verification Failed!", Toast.LENGTH_SHORT).show();
