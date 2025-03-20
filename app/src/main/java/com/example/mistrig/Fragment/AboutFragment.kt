@@ -26,3 +26,4 @@ class AboutFragment : Fragment() {
 // b
 // c
 // this is my code
+//GITIGNORE
