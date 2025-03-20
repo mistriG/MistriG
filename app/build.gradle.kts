@@ -67,6 +67,11 @@ dependencies {
     implementation("androidx.navigation:navigation-fragment-ktx:2.7.6")
     implementation("androidx.navigation:navigation-ui-ktx:2.7.6")
 
+    implementation ("com.google.firebase:firebase-auth:22.1.0")
+    implementation ("com.google.android.gms:play-services-auth:20.7.0")
+
+
+
     // ✅ Bottom Navigation
     implementation("np.com.susanthapa:curved_bottom_navigation:0.6.5")
 
