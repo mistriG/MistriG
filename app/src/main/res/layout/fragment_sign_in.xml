@@ -3,120 +3,150 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:gravity="center"
+    android:gravity="center_horizontal"
     android:padding="24dp"
     android:background="@android:color/white">
 
-    <!-- Logo -->
-    <ImageView
-        android:id="@+id/img_logo"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:src="@drawable/logo"
-        android:layout_gravity="center_horizontal"
-        android:contentDescription="Logo" />
-
-    <!-- App Name -->
-    <TextView
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="MistriG"
-        android:fontFamily="sans-serif-condensed"
-        android:textSize="22sp"
-        android:textStyle="bold"
-        android:textColor="#000000"
-        android:layout_marginTop="8dp"
-        android:layout_gravity="center_horizontal" />
+        android:orientation="vertical"
+        >
 
-    <!-- Login Text -->
-    <TextView
-        android:layout_width="wrap_content"
+        <!-- Logo -->
+        <ImageView
+            android:id="@+id/img_logo"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/logo"
+            android:layout_gravity="center_horizontal"
+            android:contentDescription="Logo" />
+
+        <!-- App Name -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="MistriG"
+            android:fontFamily="sans-serif-condensed"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:textColor="#000000"
+            android:layout_marginTop="8dp"
+            android:layout_gravity="center_horizontal" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Login"
-        android:textSize="18sp"
-        android:fontFamily="sans-serif-condensed"
-        android:textStyle="bold"
-        android:textColor="#000000"
-        android:layout_marginTop="16dp"
-        android:layout_gravity="center_horizontal" />
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="50dp
+"
+        >
+        <!-- Login Text -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Login"
+            android:textSize="18sp"
+            android:fontFamily="sans-serif-condensed"
+            android:textStyle="bold"
+            android:textColor="#000000"
+            android:layout_marginTop="16dp"
+            android:layout_gravity="center_horizontal" />
 
 
-    <EditText
-        android:id="@+id/edt_mobile"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:fontFamily="sans-serif-condensed"
-        android:hint="Mobile Number"
-        android:inputType="phone"
-        android:padding="12dp"
-        android:maxLength="10"
-        android:textSize="16sp"
-        android:background="@drawable/greyborders"
-        android:textColorHint="#000000"
-        android:layout_marginTop="16dp" />
+        <EditText
+            android:id="@+id/edt_mobile"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:fontFamily="sans-serif-condensed"
+            android:hint="Mobile Number"
+            android:inputType="phone"
+            android:padding="12dp"
+            android:maxLength="10"
+            android:textSize="16sp"
+            android:background="@drawable/greyborders"
+            android:textColorHint="#000000"
+            android:layout_marginTop="16dp" />
 
 
-    <Button
-        android:id="@+id/btn_continue"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:text="Continue"
-        android:fontFamily="sans-serif-condensed"
-        android:textSize="18sp"
-        android:textColor="@android:color/white"
-        android:backgroundTint="#000000"
-        android:layout_marginTop="16dp" />
+        <Button
+            android:id="@+id/btn_continue"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="Continue"
+            android:fontFamily="sans-serif-condensed"
+            android:textSize="18sp"
+            android:textColor="@android:color/white"
+            android:backgroundTint="#000000"
+            android:layout_marginTop="16dp" />
 
-    <!-- Divider -->
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="or"
-        android:textSize="16sp"
-        android:textColor="#888888"
-        android:layout_marginTop="16dp"
-        android:layout_gravity="center_horizontal" />
+        <!-- Divider -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="or"
+            android:textSize="16sp"
+            android:textColor="#888888"
+            android:layout_marginTop="16dp"
+            android:layout_gravity="center_horizontal" />
 
-    <!-- Social Media Buttons -->
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/btn_google"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:text="Continue with Google"
-        android:textSize="16sp"
-        android:fontFamily="sans-serif-condensed"
-        android:textColor="#000000"
-        android:background="@drawable/roundedbutton"
-        android:layout_marginTop="16dp"
-        android:drawableStart="@drawable/ic_google"
-        android:drawablePadding="10dp"/>
+        <!-- Social Media Buttons -->
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_google"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="Continue with Google"
+            android:textSize="16sp"
+            android:fontFamily="sans-serif-condensed"
+            android:textColor="#000000"
+            android:background="@drawable/roundedbutton"
+            android:layout_marginTop="16dp"
+            android:drawableStart="@drawable/ic_google"
+            android:drawablePadding="10dp"/>
 
 
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/btn_gmail"
-        android:layout_width="match_parent"
-        android:background="@drawable/roundedbutton"
-        android:layout_height="50dp"
-        android:text="Continue with Gmail"
-        android:textSize="16sp"
-        android:drawableStart="@drawable/ic_email"
-        android:backgroundTint="#D3CECE"
-        android:fontFamily="sans-serif-condensed"
-        android:textColor="#000000"
-        android:layout_marginTop="8dp" />
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_gmail"
+            android:layout_width="match_parent"
+            android:background="@drawable/roundedbutton"
+            android:layout_height="50dp"
+            android:text="Continue with Gmail"
+            android:textSize="16sp"
+            android:drawableStart="@drawable/ic_email"
+            android:backgroundTint="#D3CECE"
+            android:fontFamily="sans-serif-condensed"
+            android:textColor="#000000"
+            android:layout_marginTop="8dp" />
+
+    </LinearLayout>
+
+
+
 
 
 
     <!-- Terms and Privacy -->
-    <TextView
-        android:layout_width="wrap_content"
+    <RelativeLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="By clicking continue, you agree to our Terms of Service and Privacy Policy"
-        android:textSize="12sp"
-        android:textColor="#000000"
-        android:fontFamily="sans-serif-condensed"
-        android:gravity="center"
-        android:layout_marginTop="16dp"
-        android:layout_gravity="center_horizontal" />
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        android:padding="20dp"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="By clicking continue, you agree to our Terms of Service and Privacy Policy"
+            android:textSize="12sp"
+            android:textColor="#000000"
+            android:fontFamily="sans-serif-condensed"
+            android:layout_alignParentBottom="true"
+            android:textAlignment="center"
+            />
+    </RelativeLayout>
 
 </LinearLayout>
