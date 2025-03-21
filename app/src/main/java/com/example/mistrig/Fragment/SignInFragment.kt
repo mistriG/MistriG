@@ -10,6 +10,7 @@ import android.widget.EditText
 import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.fragment.app.Fragment
+import com.example.mistrig.Activity.AppActivity
 import com.example.mistrig.R
 import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount
@@ -95,8 +96,10 @@ class SignInFragment : Fragment() {
         auth.signInWithCredential(credential)
             .addOnCompleteListener(requireActivity()) { task ->
                 if (task.isSuccessful) {
-                    Toast.makeText(requireContext(), "Google Sign-In Successful!", Toast.LENGTH_SHORT).show()
-                    openSignUpFragment()
+                    Toast.makeText(requireContext(), "WELCOME TO MISTRIG", Toast.LENGTH_SHORT).show()
+                    val intent = Intent(requireActivity(), AppActivity::class.java)
+                    intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+                    startActivity(intent)
                 } else {
                     Toast.makeText(requireContext(), "Authentication Failed", Toast.LENGTH_SHORT).show()
                 }

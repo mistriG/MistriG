@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">MistriG</string>
     <string name="settings">Settings</string>
-    <string name="default_web_client_id">YOUR_WEB_CLIENT_ID</string>
+    <string name="default_web_client_id">989982940139-i0ieeotp9tho7pol9mc4edab91vih7lc.apps.googleusercontent.com</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
