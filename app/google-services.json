@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "785475492724",
+    "project_id": "mistrig-398af",
+    "storage_bucket": "mistrig-398af.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:785475492724:android:ca8aa356c208cea3a72a21",
+        "android_client_info": {
+          "package_name": "com.example.mistrig"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "785475492724-tt0c78ulqbvl4l413jhv0jbv7dslh4du.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.mistrig",
+            "certificate_hash": "8a9a9045138b1337bdede750908b818908a05dfc"
+          }
+        },
+        {
+          "client_id": "785475492724-ukih7n90hfap5g7t2cepm0bglt8nqo17.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDvOBMatvcBWnjl_QUt441PvAvhXJmsJNg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "785475492724-ukih7n90hfap5g7t2cepm0bglt8nqo17.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
