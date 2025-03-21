@@ -1,5 +1,6 @@
 package com.example.mistrig.Fragment;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -17,6 +18,7 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
+import com.example.mistrig.Activity.AppActivity;
 import com.example.mistrig.R;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -33,6 +35,10 @@ public class VerificationScreen extends Fragment {
 
     public VerificationScreen() {
 
+    }
+    private void openActivity() {
+        Intent intent = new Intent(requireContext(), AppActivity.class);
+        startActivity(intent);
     }
 
     public static VerificationScreen newInstance(String verificationId) {
@@ -124,17 +130,14 @@ public class VerificationScreen extends Fragment {
                 if (task.isSuccessful()) {
                     Toast.makeText(getContext(), "Verification Successful!", Toast.LENGTH_SHORT).show();
 
-
-                    HomeFragment homeFragment = new HomeFragment();
-                    FragmentManager fragmentManager = requireActivity().getSupportFragmentManager();
-                    FragmentTransaction transaction = fragmentManager.beginTransaction();
-                    transaction.replace(R.id.fragment_container, homeFragment);
-                    transaction.addToBackStack(null);
-                    transaction.commit();
+                    openActivity();
+                    // method tp level pe bana hai to open activity instead of homefragment
                 } else {
                     Toast.makeText(getContext(), "Verification Failed!", Toast.LENGTH_SHORT).show();
                 }
             }
         });
+
     }
+
 }
