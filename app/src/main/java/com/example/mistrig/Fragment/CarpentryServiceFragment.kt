@@ -40,3 +40,5 @@ class CarpentryServiceFragment : Fragment() {
         return view
     }
 }
+
+// this change is made after conflict resolution
