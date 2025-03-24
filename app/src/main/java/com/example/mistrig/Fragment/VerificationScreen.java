@@ -40,6 +40,15 @@ public class VerificationScreen extends Fragment {
         Intent intent = new Intent(requireContext(), AppActivity.class);
         startActivity(intent);
     }
+    private void openRoleSelectionFragment() {
+        RoleSelectionFragment roleSelectionFragment = new RoleSelectionFragment();
+        FragmentManager fragmentManager = requireActivity().getSupportFragmentManager();
+        FragmentTransaction transaction = fragmentManager.beginTransaction();
+
+        transaction.replace(R.id.fragment_container, roleSelectionFragment);
+        transaction.addToBackStack(null); // Allows back navigation
+        transaction.commit();
+    }
 
     public static VerificationScreen newInstance(String verificationId) {
         VerificationScreen fragment = new VerificationScreen();
@@ -130,8 +139,9 @@ public class VerificationScreen extends Fragment {
                 if (task.isSuccessful()) {
                     Toast.makeText(getContext(), "Verification Successful!", Toast.LENGTH_SHORT).show();
 
-                    openActivity();
+//                    openActivity();
                     // method tp level pe bana hai to open activity instead of homefragment
+                    openRoleSelectionFragment();
                 } else {
                     Toast.makeText(getContext(), "Verification Failed!", Toast.LENGTH_SHORT).show();
                 }
