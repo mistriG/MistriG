@@ -15,6 +15,8 @@
     <string name="service_name_acmachanic">AC Mechanic</string>
     <string name="service_name_painter">Painter</string>
     <string name="service_name_electrician">Electrician</string>
+    <string name="profile">profile\n</string>
+    <string name="side_nav_menu">side_nav_menu</string>
 
     <string-array name="notification_sounds">
         <item>Default Sound</item>
