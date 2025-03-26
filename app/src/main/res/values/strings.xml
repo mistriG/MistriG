@@ -7,6 +7,16 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="signIn">Sign In</string>
     <string name="forgot_password">Forgot Password?</string>
+    <string name="help">Don\'t have an account?</string>
+    <string name="service_name_carpaintary">Carpantary</string>
+    <string name="service_name_meson">Meson</string>
+    <string name="service_name_tilefitter">Tile Fitter</string>
+    <string name="service_name_welder">Welder</string>
+    <string name="service_name_acmachanic">AC Mechanic</string>
+    <string name="service_name_painter">Painter</string>
+    <string name="service_name_electrician">Electrician</string>
+    <string name="profile">profile\n</string>
+    <string name="side_nav_menu">side_nav_menu</string>
     <string name="help">Don\'t have an account?</string>zz
 
     <string-array name="notification_sounds">
