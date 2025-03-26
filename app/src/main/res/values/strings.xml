@@ -17,6 +17,7 @@
     <string name="service_name_electrician">Electrician</string>
     <string name="profile">profile\n</string>
     <string name="side_nav_menu">side_nav_menu</string>
+    <string name="help">Don\'t have an account?</string>zz
 
     <string-array name="notification_sounds">
         <item>Default Sound</item>
