@@ -8,16 +8,32 @@
     <string name="signIn">Sign In</string>
     <string name="forgot_password">Forgot Password?</string>
     <string name="help">Don\'t have an account?</string>
-    <string name="service_name_carpaintary">Carpantary</string>
-    <string name="service_name_meson">Meson</string>
-    <string name="service_name_tilefitter">Tile Fitter</string>
-    <string name="service_name_welder">Welder</string>
-    <string name="service_name_acmachanic">AC Mechanic</string>
-    <string name="service_name_painter">Painter</string>
-    <string name="service_name_electrician">Electrician</string>
     <string name="profile">profile\n</string>
     <string name="side_nav_menu">side_nav_menu</string>
-    <string name="help">Don\'t have an account?</string>zz
+    <string name="none"> </string>
+<!--services name start -->
+    <string name="service_name_painter">Painter</string>
+    <string name="service_name_plumber">Plumber</string>
+    <string name="service_name_carpenter">Carpenter</string>
+    <string name="service_name_mason">Mason (Construction Worker)</string>
+    <string name="service_name_electrician">Electrician</string>
+    <string name="service_name_welder">Welder</string>
+    <string name="service_name_tile_installer">Tile Installer</string>
+    <string name="service_name_interior_designer">Interior Designer</string>
+    <string name="service_name_gardener">Gardener</string>
+    <string name="service_name_house_cleaner">House Cleaner</string>
+    <string name="service_name_ac_technician">AC Technician</string>
+    <string name="service_name_roofer">Roofer</string>
+    <string name="service_name_pest_control_specialist">Pest Control Specialist</string>
+    <string name="service_name_glass_installer">Glass Installer</string>
+    <string name="service_name_furniture_assembler">Furniture Assembler</string>
+    <string name="service_name_waterproofing_expert">Waterproofing Expert</string>
+    <string name="service_name_cctv_technician">CCTV Technician</string>
+    <string name="service_name_locksmith">Locksmith</string>
+    <string name="service_name_solar_panel_installer">Solar Panel Installer</string>
+    <string name="service_name_handyman">Handyman (General Repair Expert)</string>
+<!--    service name end -->
+
 
     <string-array name="notification_sounds">
         <item>Default Sound</item>
