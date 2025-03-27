@@ -185,226 +185,535 @@
             android:orientation="vertical"
             >
 
-
-            <!--        service layout -->
+            <!-- Row 1: Painter and Plumber -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="8dp"
                 android:orientation="horizontal">
 
+                <!-- Painter -->
                 <LinearLayout
-                    android:layout_width="match_parent"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical"
                     android:layout_weight="1"
-                    android:padding="4dp"
-                    >
+                    android:orientation="vertical"
+                    android:padding="4dp">
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="140dp"
                         android:padding="4dp"
-                        android:src="@drawable/img_carpentry_service"
-                        android:background="@drawable/border"
-                        />
+                        android:src="@drawable/img_paint_service"
+                        android:background="@drawable/border" />
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textStyle="bold"
                         android:textSize="16sp"
                         android:textColor="@color/black"
-                        android:text="@string/service_name_carpaintary"/>
+                        android:text="@string/service_name_painter" />
                 </LinearLayout>
 
-                <!--            service layout -->
+                <!-- Plumber -->
                 <LinearLayout
-                    android:layout_width="match_parent"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical"
                     android:layout_weight="1"
-                    android:padding="4dp"
-                    >
+                    android:orientation="vertical"
+                    android:padding="4dp">
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="140dp"
                         android:padding="4dp"
-                        android:src="@drawable/img_electrician_service"
-                        android:background="@drawable/border"
-                        />
+                        android:src="@drawable/img_plumber_service"
+                        android:background="@drawable/border" />
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textStyle="bold"
                         android:textSize="16sp"
                         android:textColor="@color/black"
-                        android:text="@string/service_name_electrician"/>
+                        android:text="@string/service_name_plumber" />
                 </LinearLayout>
+
             </LinearLayout>
 
-            <!--        service layout -->
+            <!-- Row 2: Carpenter and Mason -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="8dp"
                 android:orientation="horizontal">
 
+                <!-- Carpenter -->
                 <LinearLayout
-                    android:layout_width="match_parent"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical"
                     android:layout_weight="1"
-                    android:padding="4dp"
-                    >
+                    android:orientation="vertical"
+                    android:padding="4dp">
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="140dp"
                         android:padding="4dp"
-                        android:src="@drawable/img_carpentry_service"
-                        android:background="@drawable/border"
-                        />
+                        android:src="@drawable/img_carpenter"
+                        android:background="@drawable/border" />
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textStyle="bold"
                         android:textSize="16sp"
                         android:textColor="@color/black"
-                        android:text="@string/service_name_carpaintary"/>
+                        android:text="@string/service_name_carpenter" />
                 </LinearLayout>
 
-                <!--            service layout -->
+                <!-- Mason -->
                 <LinearLayout
-                    android:layout_width="match_parent"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical"
                     android:layout_weight="1"
-                    android:padding="4dp"
-                    >
+                    android:orientation="vertical"
+                    android:padding="4dp">
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="140dp"
                         android:padding="4dp"
-                        android:src="@drawable/img_electrician_service"
-                        android:background="@drawable/border"
-                        />
+                        android:src="@drawable/img_mason_service"
+                        android:background="@drawable/border" />
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textStyle="bold"
                         android:textSize="16sp"
                         android:textColor="@color/black"
-                        android:text="@string/service_name_electrician"/>
+                        android:text="@string/service_name_mason" />
                 </LinearLayout>
+
             </LinearLayout>
 
-            <!--        service layout -->
+            <!-- Row 3: Electrician and Welder -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="8dp"
                 android:orientation="horizontal">
 
+                <!-- Electrician -->
                 <LinearLayout
-                    android:layout_width="match_parent"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical"
                     android:layout_weight="1"
-                    android:padding="4dp"
-                    >
-                    <ImageView
-                        android:layout_width="match_parent"
-                        android:layout_height="140dp"
-                        android:padding="4dp"
-                        android:src="@drawable/img_carpentry_service"
-                        android:background="@drawable/border"
-                        />
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textStyle="bold"
-                        android:textSize="16sp"
-                        android:textColor="@color/black"
-                        android:text="@string/service_name_carpaintary"/>
-                </LinearLayout>
-
-                <!--            service layout -->
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
                     android:orientation="vertical"
-                    android:layout_weight="1"
-                    android:padding="4dp"
-                    >
+                    android:padding="4dp">
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="140dp"
                         android:padding="4dp"
                         android:src="@drawable/img_electrician_service"
-                        android:background="@drawable/border"
-                        />
+                        android:background="@drawable/border" />
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textStyle="bold"
                         android:textSize="16sp"
                         android:textColor="@color/black"
-                        android:text="@string/service_name_electrician"/>
+                        android:text="@string/service_name_electrician" />
                 </LinearLayout>
+
+                <!-- Welder -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:padding="4dp">
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="140dp"
+                        android:padding="4dp"
+                        android:src="@drawable/img_welder_service"
+                        android:background="@drawable/border" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:textSize="16sp"
+                        android:textColor="@color/black"
+                        android:text="@string/service_name_welder" />
+                </LinearLayout>
+
             </LinearLayout>
-            <!--        service layout -->
+
+            <!-- Row 4: Tile Installer and Interior Designer -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="8dp"
                 android:orientation="horizontal">
 
+                <!-- Tile Installer -->
                 <LinearLayout
-                    android:layout_width="match_parent"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical"
                     android:layout_weight="1"
-                    android:padding="4dp"
-                    >
+                    android:orientation="vertical"
+                    android:padding="4dp">
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="140dp"
                         android:padding="4dp"
-                        android:src="@drawable/img_carpentry_service"
-                        android:background="@drawable/border"
-                        />
+                        android:src="@drawable/img_tile_installer_service"
+                        android:background="@drawable/border" />
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textStyle="bold"
                         android:textSize="16sp"
                         android:textColor="@color/black"
-                        android:text="@string/service_name_carpaintary"/>
+                        android:text="@string/service_name_tile_installer" />
                 </LinearLayout>
 
-                <!--            service layout -->
+                <!-- Interior Designer -->
                 <LinearLayout
-                    android:layout_width="match_parent"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical"
                     android:layout_weight="1"
-                    android:padding="4dp"
-                    >
+                    android:orientation="vertical"
+                    android:padding="4dp">
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="140dp"
                         android:padding="4dp"
-                        android:src="@drawable/img_electrician_service"
-                        android:background="@drawable/border"
-                        />
+                        android:src="@drawable/img_interior_designer"
+                        android:background="@drawable/border" />
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textStyle="bold"
                         android:textSize="16sp"
                         android:textColor="@color/black"
-                        android:text="@string/service_name_electrician"/>
+                        android:text="@string/service_name_interior_designer" />
                 </LinearLayout>
+
             </LinearLayout>
 
+            <!-- Row 5: Gardener and House Cleaner -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:orientation="horizontal">
+
+                <!-- Gardener -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:padding="4dp">
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="140dp"
+                        android:padding="4dp"
+                        android:src="@drawable/img_gardener_service"
+                        android:background="@drawable/border" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:textSize="16sp"
+                        android:textColor="@color/black"
+                        android:text="@string/service_name_gardener" />
+                </LinearLayout>
+
+                <!-- House Cleaner -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:padding="4dp">
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="140dp"
+                        android:padding="4dp"
+                        android:src="@drawable/img_house_cleaner_service"
+                        android:background="@drawable/border" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:textSize="16sp"
+                        android:textColor="@color/black"
+                        android:text="@string/service_name_house_cleaner" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+<!--            from here show more can be added -->
+            <!-- Row 6: AC Technician and Roofer -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:orientation="horizontal">
+
+                <!-- AC Technician -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:padding="4dp">
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="140dp"
+                        android:padding="4dp"
+                        android:src="@drawable/img_ac_tech_service"
+                        android:background="@drawable/border" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:textSize="16sp"
+                        android:textColor="@color/black"
+                        android:text="@string/service_name_ac_technician" />
+                </LinearLayout>
+
+                <!-- Roofer -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:padding="4dp">
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="140dp"
+                        android:padding="4dp"
+                        android:src="@drawable/img_roofer_service"
+                        android:background="@drawable/border" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:textSize="16sp"
+                        android:textColor="@color/black"
+                        android:text="@string/service_name_roofer" />
+                </LinearLayout>
+
+            </LinearLayout>
+            <!-- Row 7: Pest Control Specialist and Glass Installer -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:orientation="horizontal">
+
+                <!-- Pest Control Specialist -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:padding="4dp">
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="140dp"
+                        android:padding="4dp"
+                        android:src="@drawable/img_pest_control_service"
+                        android:background="@drawable/border" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:textSize="16sp"
+                        android:textColor="@color/black"
+                        android:text="@string/service_name_pest_control_specialist" />
+                </LinearLayout>
+
+                <!-- Glass Installer -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:padding="4dp">
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="140dp"
+                        android:padding="4dp"
+                        android:src="@drawable/img_glass_installer_service"
+                        android:background="@drawable/border" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:textSize="16sp"
+                        android:textColor="@color/black"
+                        android:text="@string/service_name_glass_installer" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- Row 8: Furniture Assembler and Waterproofing Expert -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:orientation="horizontal">
+
+                <!-- Furniture Assembler -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:padding="4dp">
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="140dp"
+                        android:padding="4dp"
+                        android:src="@drawable/img_furniture_service"
+                        android:background="@drawable/border" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:textSize="16sp"
+                        android:textColor="@color/black"
+                        android:text="@string/service_name_furniture_assembler" />
+                </LinearLayout>
+
+                <!-- Waterproofing Expert -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:padding="4dp">
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="140dp"
+                        android:padding="4dp"
+                        android:src="@drawable/img_waterproofing_service"
+                        android:background="@drawable/border" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:textSize="16sp"
+                        android:textColor="@color/black"
+                        android:text="@string/service_name_waterproofing_expert" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- Row 9: CCTV Technician and Locksmith -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:orientation="horizontal">
+
+                <!-- CCTV Technician -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:padding="4dp">
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="140dp"
+                        android:padding="4dp"
+                        android:src="@drawable/img_cctv_tech_service"
+                        android:background="@drawable/border" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:textSize="16sp"
+                        android:textColor="@color/black"
+                        android:text="@string/service_name_cctv_technician" />
+                </LinearLayout>
+
+                <!-- Locksmith -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:padding="4dp">
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="140dp"
+                        android:padding="4dp"
+                        android:src="@drawable/img_locksmith_service"
+                        android:background="@drawable/border" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:textSize="16sp"
+                        android:textColor="@color/black"
+                        android:text="@string/service_name_locksmith" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- Row 10: Solar Panel Installer and Handyman -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:orientation="horizontal">
+
+                <!-- Solar Panel Installer -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:padding="4dp">
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="140dp"
+                        android:padding="4dp"
+                        android:src="@drawable/img_solar_panel_service"
+                        android:background="@drawable/border" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:textSize="16sp"
+                        android:textColor="@color/black"
+                        android:text="@string/service_name_solar_panel_installer" />
+                </LinearLayout>
+
+                <!-- Handyman -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:padding="4dp">
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="140dp"
+                        android:padding="4dp"
+                        android:src="@drawable/img_handyman_service"
+                        android:background="@drawable/border" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:textSize="16sp"
+                        android:textColor="@color/black"
+                        android:text="@string/service_name_handyman" />
+                </LinearLayout>
+
+            </LinearLayout>
 
         </LinearLayout>
     </ScrollView>
