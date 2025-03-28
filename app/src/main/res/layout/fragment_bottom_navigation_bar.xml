@@ -20,6 +20,7 @@
             android:src="@drawable/ic_n_home"
             android:layout_gravity="center_horizontal"
             android:layout_weight="1"
+            android:padding="10dp"
             android:contentDescription="@string/none"
             />
         <ImageView
@@ -29,12 +30,14 @@
             android:src="@drawable/ic_n_search"
             android:layout_gravity="center_horizontal"
             android:layout_weight="1"
+            android:padding="10dp"
             android:contentDescription="@string/none"
             />
         <ImageView
             android:id="@+id/btn_history"
             android:layout_width="50dp"
             android:layout_height="50dp"
+            android:padding="10dp"
             android:src="@drawable/ic_n_history"
             android:layout_gravity="center_horizontal"
             android:layout_weight="1"
@@ -44,6 +47,7 @@
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:src="@drawable/ic_n_settings"
+            android:padding="10dp"
             android:layout_gravity="center_horizontal"
             android:layout_weight="1"
             android:contentDescription="@string/none"

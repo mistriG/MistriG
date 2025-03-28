@@ -11,7 +11,7 @@
     <string name="profile">profile\n</string>
     <string name="side_nav_menu">side_nav_menu</string>
     <string name="none"> </string>
-<!--services name start -->
+    <!--services name start -->
     <string name="service_name_painter">Painter</string>
     <string name="service_name_plumber">Plumber</string>
     <string name="service_name_carpenter">Carpenter</string>
@@ -32,7 +32,9 @@
     <string name="service_name_locksmith">Locksmith</string>
     <string name="service_name_solar_panel_installer">Solar Panel Installer</string>
     <string name="service_name_handyman">Handyman (General Repair Expert)</string>
-<!--    service name end -->
+    <string name="legal">Legal</string>
+    <string name="v1">v1.1234</string>
+    <!--    service name end -->
 
 
     <string-array name="notification_sounds">
