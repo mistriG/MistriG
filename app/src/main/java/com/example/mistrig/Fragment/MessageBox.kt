@@ -8,8 +8,7 @@ import android.view.ViewGroup
 import com.example.mistrig.R
 
 
-
-class sidebar_menu_drawer : Fragment() {
+class MessageBox : Fragment() {
 
 
     override fun onCreateView(
@@ -17,12 +16,8 @@ class sidebar_menu_drawer : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-
-        val view : View = inflater.inflate(R.layout.fragment_sidebar_menu_drawer, container, false)
-
-
-
-        return view
+        return inflater.inflate(R.layout.fragment_message_box, container, false)
     }
+
 
 }
