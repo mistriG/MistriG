@@ -2,21 +2,21 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
         android:id="@+id/navigation_home"
-        android:icon="@drawable/ic_home"
+        android:icon="@drawable/ic_n_home"
         android:title="Home" />
 
     <item
         android:id="@+id/navigation_search"
-        android:icon="@drawable/ic_search"
+        android:icon="@drawable/ic_n_search"
         android:title="Search" />
 
     <item
         android:id="@+id/navigation_wallet"
-        android:icon="@drawable/ic_wallet"
-        android:title="Wallet" />
+        android:icon="@drawable/ic_n_history"
+        android:title="Recent Activities" />
 
     <item
         android:id="@+id/navigation_settings"
-        android:icon="@drawable/ic_settings"
+        android:icon="@drawable/ic_n_settings"
         android:title="Settings" />
 </menu>
