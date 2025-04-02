@@ -2,52 +2,42 @@ package com.example.mistrig.Activity
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import androidx.navigation.NavController
-import androidx.navigation.fragment.NavHostFragment
-import androidx.navigation.ui.setupWithNavController
+import androidx.fragment.app.Fragment
+import com.example.mistrig.Fragment.Dashboard
+
 import com.example.mistrig.R
+import com.example.mistrig.Fragment.SettingsFragment
+import com.example.mistrig.Fragment.WalletFragment
+import com.example.mistrig.Fragment.SearchFragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
-@Suppress("DEPRECATION")
 class AppActivity : AppCompatActivity() {
-
-    private lateinit var navController: NavController
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_app)
 
-        val navHostFragment = supportFragmentManager.findFragmentById(R.id.nav_host_fragment_app) as NavHostFragment
-        navController = navHostFragment.navController
-
         val bottomNavigationView: BottomNavigationView = findViewById(R.id.bottom_navigation)
-        bottomNavigationView.setupWithNavController(navController)
 
-        // Explicitly handle navigation item clicks
-        bottomNavigationView.setOnNavigationItemSelectedListener { item ->
+
+        if (savedInstanceState == null) {
+            loadFragment(Dashboard())
+        }
+
+        bottomNavigationView.setOnItemSelectedListener { item ->
             when (item.itemId) {
-                R.id.navigation_home -> {
-                    navController.navigate(R.id.navigation_home)
-                    true
-                }
-                R.id.navigation_settings -> {
-                    navController.navigate(R.id.navigation_settings)
-                    true
-                }
-                R.id.navigation_wallet -> {
-                    navController.navigate(R.id.navigation_wallet)
-                    true
-                }
-                R.id.navigation_search -> {
-                    navController.navigate(R.id.navigation_search)
-                    true
-                }
-                else -> false
+                R.id.navigation_home -> loadFragment(Dashboard())
+                R.id.navigation_settings -> loadFragment(SettingsFragment())
+                R.id.navigation_wallet -> loadFragment(WalletFragment())
+                R.id.navigation_search -> loadFragment(SearchFragment())
             }
+            true
         }
     }
 
-    override fun onSupportNavigateUp(): Boolean {
-        return navController.navigateUp() || super.onSupportNavigateUp()
+    private fun loadFragment(fragment: Fragment) {
+        supportFragmentManager.beginTransaction()
+            .replace(R.id.fragment_container, fragment)
+            .commit()
     }
 }
