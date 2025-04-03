@@ -166,7 +166,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="18sp"
+        android:textSize="22sp"
         android:textColor="@color/black"
         android:textStyle="bold"
         android:fontFamily="sans-serif-condensed"
@@ -199,19 +199,32 @@
                     android:layout_weight="1"
                     android:orientation="vertical"
                     android:padding="4dp">
-                    <ImageView
+
+                    <com.google.android.material.card.MaterialCardView
                         android:layout_width="match_parent"
-                        android:layout_height="140dp"
-                        android:padding="4dp"
-                        android:src="@drawable/img_paint_service"
-                        android:background="@drawable/border" />
+                        android:layout_height="120dp"
+                        app:cardCornerRadius="8dp"
+                        app:strokeColor="@color/black"
+                        app:strokeWidth="2dp">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+
+                            android:background="@drawable/border"
+                            android:src="@drawable/img_paint_service" />
+
+                    </com.google.android.material.card.MaterialCardView>
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textStyle="bold"
-                        android:textSize="16sp"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginBottom="2dp"
+                        android:fontFamily="sans-serif-condensed"
+                        android:text="@string/service_name_painter"
                         android:textColor="@color/black"
-                        android:text="@string/service_name_painter" />
+                        android:textSize="16sp" />
                 </LinearLayout>
 
                 <!-- Plumber -->
@@ -221,19 +234,29 @@
                     android:layout_weight="1"
                     android:orientation="vertical"
                     android:padding="4dp">
-                    <ImageView
+
+                    <com.google.android.material.card.MaterialCardView
                         android:layout_width="match_parent"
-                        android:layout_height="140dp"
-                        android:padding="4dp"
-                        android:src="@drawable/img_plumber_service"
-                        android:background="@drawable/border" />
+                        android:layout_height="120dp"
+                        app:cardCornerRadius="8dp"
+                        app:strokeColor="@color/black"
+                        app:strokeWidth="2dp">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/img_plumber_service" />
+                    </com.google.android.material.card.MaterialCardView>
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textStyle="bold"
-                        android:textSize="16sp"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginBottom="2dp"
+                        android:fontFamily="sans-serif-condensed"
+                        android:text="@string/service_name_plumber"
                         android:textColor="@color/black"
-                        android:text="@string/service_name_plumber" />
+                        android:textSize="16sp" />
                 </LinearLayout>
 
             </LinearLayout>
@@ -245,52 +268,74 @@
                 android:padding="8dp"
                 android:orientation="horizontal">
 
-                <!-- Carpenter -->
+                <!-- Painter -->
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:orientation="vertical"
                     android:padding="4dp">
-                    <ImageView
+
+                    <com.google.android.material.card.MaterialCardView
                         android:layout_width="match_parent"
-                        android:layout_height="140dp"
-                        android:padding="4dp"
-                        android:src="@drawable/img_carpenter"
-                        android:background="@drawable/border" />
+                        android:layout_height="120dp"
+                        app:cardCornerRadius="8dp"
+                        app:strokeColor="@color/black"
+                        app:strokeWidth="2dp">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+
+                            android:background="@drawable/border"
+                            android:src="@drawable/img_carpenter" />
+
+                    </com.google.android.material.card.MaterialCardView>
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textStyle="bold"
-                        android:textSize="16sp"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginBottom="2dp"
+                        android:fontFamily="sans-serif-condensed"
+                        android:text="@string/service_name_carpenter"
                         android:textColor="@color/black"
-                        android:text="@string/service_name_carpenter" />
+                        android:textSize="16sp" />
                 </LinearLayout>
 
-                <!-- Mason -->
+                <!-- Plumber -->
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:orientation="vertical"
                     android:padding="4dp">
-                    <ImageView
+
+                    <com.google.android.material.card.MaterialCardView
                         android:layout_width="match_parent"
-                        android:layout_height="140dp"
-                        android:padding="4dp"
-                        android:src="@drawable/img_mason_service"
-                        android:background="@drawable/border" />
+                        android:layout_height="120dp"
+                        app:cardCornerRadius="8dp"
+                        app:strokeColor="@color/black"
+                        app:strokeWidth="2dp">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/img_mason_service" />
+                    </com.google.android.material.card.MaterialCardView>
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textStyle="bold"
-                        android:textSize="16sp"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginBottom="2dp"
+                        android:fontFamily="sans-serif-condensed"
+                        android:text="@string/service_name_mason"
                         android:textColor="@color/black"
-                        android:text="@string/service_name_mason" />
+                        android:textSize="16sp" />
                 </LinearLayout>
 
             </LinearLayout>
-
             <!-- Row 3: Electrician and Welder -->
             <LinearLayout
                 android:layout_width="match_parent"
@@ -298,48 +343,71 @@
                 android:padding="8dp"
                 android:orientation="horizontal">
 
-                <!-- Electrician -->
+                <!-- Painter -->
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:orientation="vertical"
                     android:padding="4dp">
-                    <ImageView
+
+                    <com.google.android.material.card.MaterialCardView
                         android:layout_width="match_parent"
-                        android:layout_height="140dp"
-                        android:padding="4dp"
-                        android:src="@drawable/img_electrician_service"
-                        android:background="@drawable/border" />
+                        android:layout_height="120dp"
+                        app:cardCornerRadius="8dp"
+                        app:strokeColor="@color/black"
+                        app:strokeWidth="2dp">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+
+                            android:background="@drawable/border"
+                            android:src="@drawable/img_welder_service" />
+
+                    </com.google.android.material.card.MaterialCardView>
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textStyle="bold"
-                        android:textSize="16sp"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginBottom="2dp"
+                        android:fontFamily="sans-serif-condensed"
+                        android:text="@string/service_name_welder"
                         android:textColor="@color/black"
-                        android:text="@string/service_name_electrician" />
+                        android:textSize="16sp" />
                 </LinearLayout>
 
-                <!-- Welder -->
+                <!-- Plumber -->
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:orientation="vertical"
                     android:padding="4dp">
-                    <ImageView
+
+                    <com.google.android.material.card.MaterialCardView
                         android:layout_width="match_parent"
-                        android:layout_height="140dp"
-                        android:padding="4dp"
-                        android:src="@drawable/img_welder_service"
-                        android:background="@drawable/border" />
+                        android:layout_height="120dp"
+                        app:cardCornerRadius="8dp"
+                        app:strokeColor="@color/black"
+                        app:strokeWidth="2dp">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/img_electrician_service" />
+                    </com.google.android.material.card.MaterialCardView>
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textStyle="bold"
-                        android:textSize="16sp"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginBottom="2dp"
+                        android:fontFamily="sans-serif-condensed"
+                        android:text="@string/service_name_electrician"
                         android:textColor="@color/black"
-                        android:text="@string/service_name_welder" />
+                        android:textSize="16sp" />
                 </LinearLayout>
 
             </LinearLayout>
@@ -351,48 +419,71 @@
                 android:padding="8dp"
                 android:orientation="horizontal">
 
-                <!-- Tile Installer -->
+                <!-- Painter -->
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:orientation="vertical"
                     android:padding="4dp">
-                    <ImageView
+
+                    <com.google.android.material.card.MaterialCardView
                         android:layout_width="match_parent"
-                        android:layout_height="140dp"
-                        android:padding="4dp"
-                        android:src="@drawable/img_tile_installer_service"
-                        android:background="@drawable/border" />
+                        android:layout_height="120dp"
+                        app:cardCornerRadius="8dp"
+                        app:strokeColor="@color/black"
+                        app:strokeWidth="2dp">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+
+                            android:background="@drawable/border"
+                            android:src="@drawable/img_tile_installer_service" />
+
+                    </com.google.android.material.card.MaterialCardView>
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textStyle="bold"
-                        android:textSize="16sp"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginBottom="2dp"
+                        android:fontFamily="sans-serif-condensed"
+                        android:text="@string/service_name_tile_installer"
                         android:textColor="@color/black"
-                        android:text="@string/service_name_tile_installer" />
+                        android:textSize="16sp" />
                 </LinearLayout>
 
-                <!-- Interior Designer -->
+                <!-- Plumber -->
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:orientation="vertical"
                     android:padding="4dp">
-                    <ImageView
+
+                    <com.google.android.material.card.MaterialCardView
                         android:layout_width="match_parent"
-                        android:layout_height="140dp"
-                        android:padding="4dp"
-                        android:src="@drawable/img_interior_designer"
-                        android:background="@drawable/border" />
+                        android:layout_height="120dp"
+                        app:cardCornerRadius="8dp"
+                        app:strokeColor="@color/black"
+                        app:strokeWidth="2dp">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/img_interior_designer" />
+                    </com.google.android.material.card.MaterialCardView>
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textStyle="bold"
-                        android:textSize="16sp"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginBottom="2dp"
+                        android:fontFamily="sans-serif-condensed"
+                        android:text="@string/service_name_interior_designer"
                         android:textColor="@color/black"
-                        android:text="@string/service_name_interior_designer" />
+                        android:textSize="16sp" />
                 </LinearLayout>
 
             </LinearLayout>
@@ -404,48 +495,71 @@
                 android:padding="8dp"
                 android:orientation="horizontal">
 
-                <!-- Gardener -->
+                <!-- Painter -->
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:orientation="vertical"
                     android:padding="4dp">
-                    <ImageView
+
+                    <com.google.android.material.card.MaterialCardView
                         android:layout_width="match_parent"
-                        android:layout_height="140dp"
-                        android:padding="4dp"
-                        android:src="@drawable/img_gardener_service"
-                        android:background="@drawable/border" />
+                        android:layout_height="120dp"
+                        app:cardCornerRadius="8dp"
+                        app:strokeColor="@color/black"
+                        app:strokeWidth="2dp">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+
+                            android:background="@drawable/border"
+                            android:src="@drawable/img_gardener_service" />
+
+                    </com.google.android.material.card.MaterialCardView>
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textStyle="bold"
-                        android:textSize="16sp"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginBottom="2dp"
+                        android:fontFamily="sans-serif-condensed"
+                        android:text="@string/service_name_gardener"
                         android:textColor="@color/black"
-                        android:text="@string/service_name_gardener" />
+                        android:textSize="16sp" />
                 </LinearLayout>
 
-                <!-- House Cleaner -->
+                <!-- Plumber -->
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:orientation="vertical"
                     android:padding="4dp">
-                    <ImageView
+
+                    <com.google.android.material.card.MaterialCardView
                         android:layout_width="match_parent"
-                        android:layout_height="140dp"
-                        android:padding="4dp"
-                        android:src="@drawable/img_house_cleaner_service"
-                        android:background="@drawable/border" />
+                        android:layout_height="120dp"
+                        app:cardCornerRadius="8dp"
+                        app:strokeColor="@color/black"
+                        app:strokeWidth="2dp">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/img_house_cleaner_service" />
+                    </com.google.android.material.card.MaterialCardView>
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textStyle="bold"
-                        android:textSize="16sp"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginBottom="2dp"
+                        android:fontFamily="sans-serif-condensed"
+                        android:text="@string/service_name_house_cleaner"
                         android:textColor="@color/black"
-                        android:text="@string/service_name_house_cleaner" />
+                        android:textSize="16sp" />
                 </LinearLayout>
 
             </LinearLayout>
@@ -458,48 +572,71 @@
                 android:padding="8dp"
                 android:orientation="horizontal">
 
-                <!-- AC Technician -->
+                <!-- Painter -->
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:orientation="vertical"
                     android:padding="4dp">
-                    <ImageView
+
+                    <com.google.android.material.card.MaterialCardView
                         android:layout_width="match_parent"
-                        android:layout_height="140dp"
-                        android:padding="4dp"
-                        android:src="@drawable/img_ac_tech_service"
-                        android:background="@drawable/border" />
+                        android:layout_height="120dp"
+                        app:cardCornerRadius="8dp"
+                        app:strokeColor="@color/black"
+                        app:strokeWidth="2dp">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+
+                            android:background="@drawable/border"
+                            android:src="@drawable/img_roofer_service" />
+
+                    </com.google.android.material.card.MaterialCardView>
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textStyle="bold"
-                        android:textSize="16sp"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginBottom="2dp"
+                        android:fontFamily="sans-serif-condensed"
+                        android:text="@string/service_name_roofer"
                         android:textColor="@color/black"
-                        android:text="@string/service_name_ac_technician" />
+                        android:textSize="16sp" />
                 </LinearLayout>
 
-                <!-- Roofer -->
+                <!-- Plumber -->
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:orientation="vertical"
                     android:padding="4dp">
-                    <ImageView
+
+                    <com.google.android.material.card.MaterialCardView
                         android:layout_width="match_parent"
-                        android:layout_height="140dp"
-                        android:padding="4dp"
-                        android:src="@drawable/img_roofer_service"
-                        android:background="@drawable/border" />
+                        android:layout_height="120dp"
+                        app:cardCornerRadius="8dp"
+                        app:strokeColor="@color/black"
+                        app:strokeWidth="2dp">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/img_ac_tech_service" />
+                    </com.google.android.material.card.MaterialCardView>
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textStyle="bold"
-                        android:textSize="16sp"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginBottom="2dp"
+                        android:fontFamily="sans-serif-condensed"
+                        android:text="@string/service_name_ac_technician"
                         android:textColor="@color/black"
-                        android:text="@string/service_name_roofer" />
+                        android:textSize="16sp" />
                 </LinearLayout>
 
             </LinearLayout>
@@ -510,48 +647,71 @@
                 android:padding="8dp"
                 android:orientation="horizontal">
 
-                <!-- Pest Control Specialist -->
+                <!-- Painter -->
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:orientation="vertical"
                     android:padding="4dp">
-                    <ImageView
+
+                    <com.google.android.material.card.MaterialCardView
                         android:layout_width="match_parent"
-                        android:layout_height="140dp"
-                        android:padding="4dp"
-                        android:src="@drawable/img_pest_control_service"
-                        android:background="@drawable/border" />
+                        android:layout_height="120dp"
+                        app:cardCornerRadius="8dp"
+                        app:strokeColor="@color/black"
+                        app:strokeWidth="2dp">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+
+                            android:background="@drawable/border"
+                            android:src="@drawable/img_pest_control_service" />
+
+                    </com.google.android.material.card.MaterialCardView>
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textStyle="bold"
-                        android:textSize="16sp"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginBottom="2dp"
+                        android:fontFamily="sans-serif-condensed"
+                        android:text="@string/service_name_pest_control_specialist"
                         android:textColor="@color/black"
-                        android:text="@string/service_name_pest_control_specialist" />
+                        android:textSize="16sp" />
                 </LinearLayout>
 
-                <!-- Glass Installer -->
+                <!-- Plumber -->
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:orientation="vertical"
                     android:padding="4dp">
-                    <ImageView
+
+                    <com.google.android.material.card.MaterialCardView
                         android:layout_width="match_parent"
-                        android:layout_height="140dp"
-                        android:padding="4dp"
-                        android:src="@drawable/img_glass_installer_service"
-                        android:background="@drawable/border" />
+                        android:layout_height="120dp"
+                        app:cardCornerRadius="8dp"
+                        app:strokeColor="@color/black"
+                        app:strokeWidth="2dp">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/img_glass_installer_service" />
+                    </com.google.android.material.card.MaterialCardView>
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textStyle="bold"
-                        android:textSize="16sp"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginBottom="2dp"
+                        android:fontFamily="sans-serif-condensed"
+                        android:text="@string/service_name_glass_installer"
                         android:textColor="@color/black"
-                        android:text="@string/service_name_glass_installer" />
+                        android:textSize="16sp" />
                 </LinearLayout>
 
             </LinearLayout>
@@ -563,48 +723,71 @@
                 android:padding="8dp"
                 android:orientation="horizontal">
 
-                <!-- Furniture Assembler -->
+                <!-- Painter -->
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:orientation="vertical"
                     android:padding="4dp">
-                    <ImageView
+
+                    <com.google.android.material.card.MaterialCardView
                         android:layout_width="match_parent"
-                        android:layout_height="140dp"
-                        android:padding="4dp"
-                        android:src="@drawable/img_furniture_service"
-                        android:background="@drawable/border" />
+                        android:layout_height="120dp"
+                        app:cardCornerRadius="8dp"
+                        app:strokeColor="@color/black"
+                        app:strokeWidth="2dp">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+
+                            android:background="@drawable/border"
+                            android:src="@drawable/img_furniture_service" />
+
+                    </com.google.android.material.card.MaterialCardView>
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textStyle="bold"
-                        android:textSize="16sp"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginBottom="2dp"
+                        android:fontFamily="sans-serif-condensed"
+                        android:text="@string/service_name_furniture_assembler"
                         android:textColor="@color/black"
-                        android:text="@string/service_name_furniture_assembler" />
+                        android:textSize="16sp" />
                 </LinearLayout>
 
-                <!-- Waterproofing Expert -->
+                <!-- Plumber -->
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:orientation="vertical"
                     android:padding="4dp">
-                    <ImageView
+
+                    <com.google.android.material.card.MaterialCardView
                         android:layout_width="match_parent"
-                        android:layout_height="140dp"
-                        android:padding="4dp"
-                        android:src="@drawable/img_waterproofing_service"
-                        android:background="@drawable/border" />
+                        android:layout_height="120dp"
+                        app:cardCornerRadius="8dp"
+                        app:strokeColor="@color/black"
+                        app:strokeWidth="2dp">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/img_waterproofing_service" />
+                    </com.google.android.material.card.MaterialCardView>
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textStyle="bold"
-                        android:textSize="16sp"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginBottom="2dp"
+                        android:fontFamily="sans-serif-condensed"
+                        android:text="@string/service_name_waterproofing_expert"
                         android:textColor="@color/black"
-                        android:text="@string/service_name_waterproofing_expert" />
+                        android:textSize="16sp" />
                 </LinearLayout>
 
             </LinearLayout>
@@ -616,48 +799,71 @@
                 android:padding="8dp"
                 android:orientation="horizontal">
 
-                <!-- CCTV Technician -->
+                <!-- Painter -->
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:orientation="vertical"
                     android:padding="4dp">
-                    <ImageView
+
+                    <com.google.android.material.card.MaterialCardView
                         android:layout_width="match_parent"
-                        android:layout_height="140dp"
-                        android:padding="4dp"
-                        android:src="@drawable/img_cctv_tech_service"
-                        android:background="@drawable/border" />
+                        android:layout_height="120dp"
+                        app:cardCornerRadius="8dp"
+                        app:strokeColor="@color/black"
+                        app:strokeWidth="2dp">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+
+                            android:background="@drawable/border"
+                            android:src="@drawable/img_cctv_tech_service" />
+
+                    </com.google.android.material.card.MaterialCardView>
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textStyle="bold"
-                        android:textSize="16sp"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginBottom="2dp"
+                        android:fontFamily="sans-serif-condensed"
+                        android:text="@string/service_name_cctv_technician"
                         android:textColor="@color/black"
-                        android:text="@string/service_name_cctv_technician" />
+                        android:textSize="16sp" />
                 </LinearLayout>
 
-                <!-- Locksmith -->
+                <!-- Plumber -->
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:orientation="vertical"
                     android:padding="4dp">
-                    <ImageView
+
+                    <com.google.android.material.card.MaterialCardView
                         android:layout_width="match_parent"
-                        android:layout_height="140dp"
-                        android:padding="4dp"
-                        android:src="@drawable/img_locksmith_service"
-                        android:background="@drawable/border" />
+                        android:layout_height="120dp"
+                        app:cardCornerRadius="8dp"
+                        app:strokeColor="@color/black"
+                        app:strokeWidth="2dp">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/img_locksmith_service" />
+                    </com.google.android.material.card.MaterialCardView>
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textStyle="bold"
-                        android:textSize="16sp"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginBottom="2dp"
+                        android:fontFamily="sans-serif-condensed"
+                        android:text="@string/service_name_locksmith"
                         android:textColor="@color/black"
-                        android:text="@string/service_name_locksmith" />
+                        android:textSize="16sp" />
                 </LinearLayout>
 
             </LinearLayout>
@@ -671,46 +877,78 @@
 
                 <!-- Solar Panel Installer -->
                 <LinearLayout
-                    android:layout_width="0dp"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:orientation="vertical"
-                    android:padding="4dp">
-                    <ImageView
-                        android:layout_width="match_parent"
-                        android:layout_height="140dp"
-                        android:padding="4dp"
-                        android:src="@drawable/img_solar_panel_service"
-                        android:background="@drawable/border" />
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textStyle="bold"
-                        android:textSize="16sp"
-                        android:textColor="@color/black"
-                        android:text="@string/service_name_solar_panel_installer" />
-                </LinearLayout>
+                    android:padding="8dp"
+                    android:orientation="horizontal">
 
-                <!-- Handyman -->
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:orientation="vertical"
-                    android:padding="4dp">
-                    <ImageView
-                        android:layout_width="match_parent"
-                        android:layout_height="140dp"
-                        android:padding="4dp"
-                        android:src="@drawable/img_handyman_service"
-                        android:background="@drawable/border" />
-                    <TextView
-                        android:layout_width="wrap_content"
+                    <!-- Painter -->
+                    <LinearLayout
+                        android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:textStyle="bold"
-                        android:textSize="16sp"
-                        android:textColor="@color/black"
-                        android:text="@string/service_name_handyman" />
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:padding="4dp">
+
+                        <com.google.android.material.card.MaterialCardView
+                            android:layout_width="match_parent"
+                            android:layout_height="120dp"
+                            app:cardCornerRadius="8dp"
+                            app:strokeColor="@color/black"
+                            app:strokeWidth="2dp">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+
+                                android:background="@drawable/border"
+                                android:src="@drawable/img_solar_panel_service" />
+
+                        </com.google.android.material.card.MaterialCardView>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:layout_marginBottom="2dp"
+                            android:fontFamily="sans-serif-condensed"
+                            android:text="@string/service_name_solar_panel_installer"
+                            android:textColor="@color/black"
+                            android:textSize="16sp" />
+                    </LinearLayout>
+
+                    <!-- Plumber -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:padding="4dp">
+
+                        <com.google.android.material.card.MaterialCardView
+                            android:layout_width="match_parent"
+                            android:layout_height="120dp"
+                            app:cardCornerRadius="8dp"
+                            app:strokeColor="@color/black"
+                            app:strokeWidth="2dp">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:src="@drawable/img_handyman_service" />
+                        </com.google.android.material.card.MaterialCardView>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:layout_marginBottom="2dp"
+                            android:fontFamily="sans-serif-condensed"
+                            android:text="@string/service_name_handyman"
+                            android:textColor="@color/black"
+                            android:textSize="16sp" />
+                    </LinearLayout>
+
                 </LinearLayout>
 
             </LinearLayout>

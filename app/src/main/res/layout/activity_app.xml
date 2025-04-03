@@ -19,15 +19,15 @@
             android:layout_height="60dp"
             android:background="@color/white"
             android:elevation="4dp"
-            android:padding="4dp"
+            android:paddingHorizontal="8dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
             <ImageView
                 android:id="@+id/menu"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
+                android:layout_width="34dp"
+                android:layout_height="34dp"
                 android:layout_alignParentStart="true"
                 android:layout_centerVertical="true"
                 android:clickable="true"
@@ -46,16 +46,23 @@
                 android:textSize="20sp"
                 android:textStyle="bold" />
 
-            <ImageView
-                android:id="@+id/profile"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="34dp"
+                android:layout_height="34dp"
                 android:layout_alignParentEnd="true"
                 android:layout_centerVertical="true"
-                android:background="@drawable/profile_border"
-                android:clickable="true"
-                android:contentDescription="@string/profile"
-                android:src="@drawable/logo" />
+                app:strokeColor="@color/black"
+                app:strokeWidth="1dp"
+                app:cardCornerRadius="17dp">
+                <ImageView
+                    android:id="@+id/profile"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:clickable="true"
+                    android:contentDescription="@string/profile"
+                    android:src="@drawable/img_user_example_phot" />
+            </com.google.android.material.card.MaterialCardView>
+
         </RelativeLayout>
 
 
