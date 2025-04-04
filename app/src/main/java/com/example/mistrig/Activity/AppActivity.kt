@@ -12,7 +12,7 @@ import com.example.mistrig.Fragment.Dashboard
 import com.example.mistrig.Fragment.SettingsFragment
 import com.example.mistrig.Fragment.WalletFragment
 import com.example.mistrig.Fragment.SearchFragment
-import com.example.mistrig.Fragment.sidebar_menu_drawer
+import com.example.mistrig.Fragment.SideBarMenuDrawer
 import com.example.mistrig.R
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
@@ -59,7 +59,7 @@ class AppActivity : AppCompatActivity() {
 
         if (savedInstanceState == null) {
             supportFragmentManager.beginTransaction()
-                .replace(R.id.sidebar_menu_drawer, sidebar_menu_drawer())
+                .replace(R.id.sidebar_menu_drawer, SideBarMenuDrawer())
                 .commit()
         }
     }

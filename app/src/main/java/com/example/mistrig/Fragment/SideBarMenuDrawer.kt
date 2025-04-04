@@ -11,14 +11,14 @@ import com.example.mistrig.R
 import kotlin.jvm.java
 
 
-class sidebar_menu_drawer : Fragment() {
+class SideBarMenuDrawer : Fragment() {
 
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
-        // Inflate the layout for this fragment
+    ): View {
+
 
         val view : View = inflater.inflate(R.layout.fragment_sidebar_menu_drawer, container, false)
 
