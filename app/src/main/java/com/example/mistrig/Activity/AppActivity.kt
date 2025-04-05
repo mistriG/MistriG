@@ -2,13 +2,17 @@ package com.example.mistrig.Activity
 
 import android.os.Bundle
 import android.view.Gravity
+import android.view.LayoutInflater
 import android.view.View
+import android.widget.ImageView
+import android.widget.RelativeLayout
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate
 import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.fragment.app.Fragment
 import com.example.mistrig.Fragment.Dashboard
+import com.example.mistrig.Fragment.MessageBox
 import com.example.mistrig.Fragment.SettingsFragment
 import com.example.mistrig.Fragment.WalletFragment
 import com.example.mistrig.Fragment.SearchFragment
@@ -53,6 +57,11 @@ class AppActivity : AppCompatActivity() {
                 drawerLayout.closeDrawer(GravityCompat.START)
             } else {
                 drawerLayout.openDrawer(GravityCompat.START)
+                val btn = findViewById<ImageView>(R.id.btn_show_msg)
+                btn.setOnClickListener {
+                    loadFragment(MessageBox())
+                    drawerLayout.closeDrawer(GravityCompat.START)
+                }
             }
         }
 

@@ -210,7 +210,6 @@
                         <ImageView
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-
                             android:background="@drawable/border"
                             android:src="@drawable/img_paint_service" />
 
@@ -286,7 +285,6 @@
                         <ImageView
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-
                             android:background="@drawable/border"
                             android:src="@drawable/img_carpenter" />
 
