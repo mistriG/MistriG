@@ -97,7 +97,7 @@
 
     <FrameLayout
         android:id="@+id/sidebar_menu_drawer"
-        android:layout_width="280dp"
+        android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:layout_gravity="start"
         android:background="@color/white" />
