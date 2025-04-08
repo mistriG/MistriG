@@ -13,6 +13,7 @@ import androidx.drawerlayout.widget.DrawerLayout
 import androidx.fragment.app.Fragment
 import com.example.mistrig.Fragment.Dashboard
 import com.example.mistrig.Fragment.MessageBox
+import com.example.mistrig.Fragment.Recent
 import com.example.mistrig.Fragment.SettingsFragment
 import com.example.mistrig.Fragment.WalletFragment
 import com.example.mistrig.Fragment.SearchFragment
@@ -45,7 +46,7 @@ class AppActivity : AppCompatActivity() {
             when (item.itemId) {
                 R.id.navigation_home -> loadFragment(Dashboard())
                 R.id.navigation_settings -> loadFragment(SettingsFragment())
-                R.id.navigation_wallet -> loadFragment(WalletFragment())
+                R.id.navigation_wallet -> loadFragment(Recent())
                 R.id.navigation_search -> loadFragment(SearchFragment())
             }
             true
