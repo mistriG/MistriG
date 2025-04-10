@@ -1,324 +1,259 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scrollView"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#f2f0ef"
+    android:background="#FDFDFD"
     tools:context=".Fragment.SettingsFragment">
 
-
-    <RelativeLayout
+    <LinearLayout
+        android:id="@+id/mainLayout"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
 
-        <com.google.android.material.appbar.MaterialToolbar
-            android:id="@+id/toolbar"
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/upperLayout"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@drawable/settings_toolbar_background">
+            android:layout_height="145dp"
+            android:background="#B0ACAC"
+            android:paddingStart="17dp"
+            android:paddingEnd="17dp">
 
             <TextView
-                android:layout_width="wrap_content"
+                android:id="@+id/heading"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:text="@string/settings"
-                android:fontFamily="@font/montserrat_regular"
-                android:textColor="#000000"
-                android:textSize="18sp">
+                android:fontFamily="sans-serif-condensed"
+                android:text="Account Settings"
+                android:textColor="@color/black"
+                android:textSize="40sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.7" />
 
-            </TextView>
-        </com.google.android.material.appbar.MaterialToolbar>
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
-        <ScrollView
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/lowerLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/toolbar"
-            android:padding="20dp">
+            android:padding="17dp">
 
-            <LinearLayout
-                android:layout_width="match_parent"
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/profileImage"
+                android:layout_width="71dp"
+                android:layout_height="71dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:clickable="true"
+                android:focusable="true"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_profile"
+                app:layout_constraintBottom_toBottomOf="@id/phoneNumber"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                />
+            <!--                app:shapeAppearance="@style/circleImageView" -->
+
+            <TextView
+                android:id="@+id/userName"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="vertical">
+                android:layout_marginStart="17dp"
+                android:layout_marginBottom="2dp"
+                android:background="?attr/selectableItemBackground"
+                android:clickable="true"
+                android:ellipsize="end"
+                android:focusable="true"
+                android:fontFamily="sans-serif-condensed"
+                android:maxLength="30"
+                android:maxLines="1"
+                android:text="Alex Jeff"
+                android:textColor="@color/black"
+                android:textSize="21sp"
+                app:layout_constraintBottom_toTopOf="@id/phoneNumber"
+                app:layout_constraintStart_toEndOf="@+id/profileImage"
+                app:layout_constraintTop_toTopOf="@+id/profileImage"
+                app:layout_constraintVertical_chainStyle="packed" />
 
-                <RelativeLayout
-                    android:id="@+id/profile_btn"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:layout_marginBottom="10dp"
-                    android:paddingEnd="20dp"
-                    android:paddingStart="20dp"
-                    android:background="@drawable/seen_notification_background">
+            <TextView
+                android:id="@+id/phoneNumber"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="17dp"
+                android:layout_marginTop="2dp"
+                android:background="?attr/selectableItemBackground"
+                android:clickable="true"
+                android:ellipsize="end"
+                android:focusable="true"
+                android:fontFamily="sans-serif-condensed"
+                android:maxLength="20"
+                android:maxLines="1"
+                android:text="+91 1234567890"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="@id/profileImage"
+                app:layout_constraintStart_toEndOf="@+id/profileImage"
+                app:layout_constraintTop_toBottomOf="@id/userName" />
 
-                    <androidx.appcompat.widget.AppCompatImageView
-                        android:id="@+id/profile_icon"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:src="@drawable/ic_profile"
-                        android:layout_marginStart="10dp"
-                        android:layout_centerInParent="true"
-                        android:layout_alignParentStart="true"/>
+            <TextView
+                android:id="@+id/favoritesHeading"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp"
+                android:fontFamily="sans-serif-condensed"
+                android:text="Favorites"
+                android:textColor="#979797"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="@id/profileImage"
+                app:layout_constraintTop_toBottomOf="@id/profileImage" />
 
-                    <androidx.appcompat.widget.AppCompatTextView
-                        android:id="@+id/txt_notification"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:padding="10dp"
-                        android:text="Profile"
-                        android:layout_toEndOf="@id/profile_icon"
-                        android:textColor="#3A3A3A"
-                        android:layout_margin="10dp"
-                        android:fontFamily="@font/montserrat_regular"
-                        android:textSize="14sp"/>
+            <ImageView
+                android:id="@+id/homeImage"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_marginTop="28dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:clickable="true"
+                android:focusable="true"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_home_logo"
+                app:layout_constraintStart_toStartOf="@id/favoritesHeading"
+                app:layout_constraintTop_toBottomOf="@+id/favoritesHeading" />
 
-                    <androidx.appcompat.widget.AppCompatImageView
-                        android:id="@+id/notification_arrow"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:src="@drawable/right_arrow"
-                        android:layout_centerInParent="true"
-                        android:layout_alignParentEnd="true"/>
-                </RelativeLayout>
-
-                <RelativeLayout
-                    android:id="@+id/btn_reset_password"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:layout_marginBottom="10dp"
-                    android:paddingEnd="20dp"
-                    android:paddingStart="20dp"
-                    android:background="@drawable/seen_notification_background">
-
-                    <androidx.appcompat.widget.AppCompatImageView
-                        android:id="@+id/password_icon"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:src="@drawable/ic_change_password"
-                        android:layout_marginStart="10dp"
-                        android:layout_centerInParent="true"
-                        android:layout_alignParentStart="true"/>
-
-                    <androidx.appcompat.widget.AppCompatTextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:padding="10dp"
-                        android:text="Change Password"
-                        android:layout_toEndOf="@id/password_icon"
-                        android:textColor="#3A3A3A"
-                        android:layout_margin="10dp"
-                        android:fontFamily="@font/montserrat_regular"
-                        android:textSize="14sp"/>
-
-                    <androidx.appcompat.widget.AppCompatImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:src="@drawable/right_arrow"
-                        android:layout_centerInParent="true"
-                        android:layout_alignParentEnd="true"/>
-                </RelativeLayout>
-
-                <RelativeLayout
-                    android:id="@+id/btn_notification_preference"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:layout_marginBottom="10dp"
-                    android:paddingEnd="20dp"
-                    android:paddingStart="20dp"
-                    android:background="@drawable/seen_notification_background">
-
-                    <androidx.appcompat.widget.AppCompatImageView
-                        android:id="@+id/notification_icon"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:src="@drawable/ic_notification"
-                        android:layout_marginStart="10dp"
-                        android:layout_centerInParent="true"
-                        android:layout_alignParentStart="true"/>
-
-                    <androidx.appcompat.widget.AppCompatTextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:padding="10dp"
-                        android:text="Notification Preferences"
-                        android:layout_toEndOf="@id/notification_icon"
-                        android:textColor="#3A3A3A"
-                        android:layout_margin="10dp"
-                        android:fontFamily="@font/montserrat_regular"
-                        android:textSize="14sp"/>
-
-                    <androidx.appcompat.widget.AppCompatImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:src="@drawable/right_arrow"
-                        android:layout_centerInParent="true"
-                        android:layout_alignParentEnd="true"/>
-                </RelativeLayout>
-
-                <RelativeLayout
-                    android:id="@+id/btn_help_and_support"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:layout_marginBottom="10dp"
-                    android:paddingEnd="20dp"
-                    android:paddingStart="20dp"
-                    android:background="@drawable/seen_notification_background">
-
-                    <androidx.appcompat.widget.AppCompatImageView
-                        android:id="@+id/help_icon"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:src="@drawable/ic_help"
-                        android:layout_marginStart="10dp"
-                        android:layout_centerInParent="true"
-                        android:layout_alignParentStart="true"/>
-
-                    <androidx.appcompat.widget.AppCompatTextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:padding="10dp"
-                        android:text="Help and Support"
-                        android:layout_toEndOf="@id/help_icon"
-                        android:textColor="#3A3A3A"
-                        android:layout_margin="10dp"
-                        android:fontFamily="@font/montserrat_regular"
-                        android:textSize="14sp"/>
-
-                    <androidx.appcompat.widget.AppCompatImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:src="@drawable/right_arrow"
-                        android:layout_centerInParent="true"
-                        android:layout_alignParentEnd="true"/>
-                </RelativeLayout>
-
-                <RelativeLayout
-                    android:id="@+id/btn_legal_policy"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:layout_marginBottom="10dp"
-                    android:paddingEnd="20dp"
-                    android:paddingStart="20dp"
-                    android:background="@drawable/seen_notification_background">
-
-                    <androidx.appcompat.widget.AppCompatImageView
-                        android:id="@+id/legal_icon"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:src="@drawable/ic_legal_policy"
-                        android:layout_marginStart="10dp"
-                        android:layout_centerInParent="true"
-                        android:layout_alignParentStart="true"/>
-
-                    <androidx.appcompat.widget.AppCompatTextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:padding="10dp"
-                        android:text="Legal Policy"
-                        android:layout_toEndOf="@id/legal_icon"
-                        android:textColor="#3A3A3A"
-                        android:layout_margin="10dp"
-                        android:fontFamily="@font/montserrat_regular"
-                        android:textSize="14sp"/>
-
-                    <androidx.appcompat.widget.AppCompatImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:src="@drawable/right_arrow"
-                        android:layout_centerInParent="true"
-                        android:layout_alignParentEnd="true"/>
-                </RelativeLayout>
-
-                <RelativeLayout
-                    android:id="@+id/btn_about"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:layout_marginBottom="10dp"
-                    android:paddingEnd="20dp"
-                    android:paddingStart="20dp"
-                    android:background="@drawable/seen_notification_background">
-
-                    <androidx.appcompat.widget.AppCompatImageView
-                        android:id="@+id/about_icon"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:src="@drawable/ic_about_us"
-                        android:layout_marginStart="10dp"
-                        android:layout_centerInParent="true"
-                        android:layout_alignParentStart="true"/>
-
-                    <androidx.appcompat.widget.AppCompatTextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:padding="10dp"
-                        android:text="About Us"
-                        android:layout_toEndOf="@id/about_icon"
-                        android:textColor="#3A3A3A"
-                        android:layout_margin="10dp"
-                        android:fontFamily="@font/montserrat_regular"
-                        android:textSize="14sp"/>
-
-                    <androidx.appcompat.widget.AppCompatImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:src="@drawable/right_arrow"
-                        android:layout_centerInParent="true"
-                        android:layout_alignParentEnd="true"/>
-                </RelativeLayout>
-
-                <RelativeLayout
-                    android:id="@+id/btn_logout"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:layout_marginBottom="10dp"
-                    android:paddingEnd="20dp"
-                    android:paddingStart="20dp"
-                    android:background="@drawable/seen_notification_background">
-
-                    <androidx.appcompat.widget.AppCompatImageView
-                        android:id="@+id/logout_icon"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:src="@drawable/ic_log_out"
-                        android:layout_marginStart="10dp"
-                        android:layout_centerInParent="true"
-                        android:layout_alignParentStart="true"/>
-
-                    <androidx.appcompat.widget.AppCompatTextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:padding="10dp"
-                        android:text="Log Out"
-                        android:layout_toEndOf="@id/logout_icon"
-                        android:textColor="#3A3A3A"
-                        android:layout_margin="10dp"
-                        android:fontFamily="@font/montserrat_regular"
-                        android:textSize="14sp"/>
-
-                    <androidx.appcompat.widget.AppCompatImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:src="@drawable/right_arrow"
-                        android:layout_centerInParent="true"
-                        android:layout_alignParentEnd="true"/>
-                </RelativeLayout>
+            <TextView
+                android:id="@+id/addHomeBtn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="23dp"
+                android:background="?attr/selectableItemBackground"
+                android:clickable="true"
+                android:focusable="true"
+                android:fontFamily="sans-serif-condensed"
+                android:text="Add Home"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="@id/homeImage"
+                app:layout_constraintStart_toEndOf="@+id/homeImage"
+                app:layout_constraintTop_toTopOf="@id/homeImage" />
 
 
+            <ImageView
+                android:id="@+id/workImage"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_marginTop="18dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:clickable="true"
+                android:focusable="true"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_attachi_logo"
+                app:layout_constraintStart_toStartOf="@id/homeImage"
+                app:layout_constraintTop_toBottomOf="@id/homeImage" />
+
+            <TextView
+                android:id="@+id/addWorkBtn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="23dp"
+                android:background="?attr/selectableItemBackground"
+                android:clickable="true"
+                android:focusable="true"
+                android:fontFamily="sans-serif-condensed"
+                android:text="Add Work"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="@id/workImage"
+                app:layout_constraintStart_toEndOf="@+id/workImage"
+                app:layout_constraintTop_toTopOf="@id/workImage" />
+
+            <TextView
+                android:id="@+id/moreSavedPlacesHeading"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp"
+                android:fontFamily="sans-serif-condensed"
+                android:text="More Saved Places"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="@id/workImage"
+                app:layout_constraintTop_toBottomOf="@id/workImage" />
+
+            <TextView
+                android:id="@+id/privacyBtn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="28dp"
+                android:background="?attr/selectableItemBackground"
+                android:clickable="true"
+                android:focusable="true"
+                android:fontFamily="sans-serif-condensed"
+                android:text="Privacy"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="@id/moreSavedPlacesHeading"
+                app:layout_constraintTop_toBottomOf="@id/moreSavedPlacesHeading" />
+
+            <TextView
+                android:id="@+id/privacyDescription"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="sans-serif-condensed"
+                android:text="Manage the data you share with us"
+                android:textColor="#979797"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="@id/privacyBtn"
+                app:layout_constraintTop_toBottomOf="@id/privacyBtn" />
+
+            <TextView
+                android:id="@+id/securityBtn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="?attr/selectableItemBackground"
+                android:clickable="true"
+                android:focusable="true"
+                android:fontFamily="sans-serif-condensed"
+                android:text="Security"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="@id/privacyDescription"
+                app:layout_constraintTop_toBottomOf="@id/privacyDescription" />
+
+            <TextView
+                android:id="@+id/securityDescription"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="sans-serif-condensed"
+                android:text="Control your account security with 2 step verification"
+                android:textColor="#979797"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="@id/securityBtn"
+                app:layout_constraintTop_toBottomOf="@id/securityBtn" />
+
+            <TextView
+                android:id="@+id/signOutBtn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="?attr/selectableItemBackground"
+                android:clickable="true"
+                android:focusable="true"
+                android:fontFamily="sans-serif-condensed"
+                android:text="Sign out"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="@id/securityDescription"
+                app:layout_constraintTop_toBottomOf="@id/securityDescription" />
 
 
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
 
-
-            </LinearLayout>
-
-        </ScrollView>
-
-    </RelativeLayout>
-
-
-
-</FrameLayout>
+</ScrollView>
