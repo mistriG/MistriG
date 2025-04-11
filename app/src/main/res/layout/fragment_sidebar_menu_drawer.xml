@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".Fragment.sidebar_menu_drawer">
+    tools:context=".Fragment.SideBarMenuDrawer">
 
 
     <LinearLayout
