@@ -43,8 +43,9 @@ class SearchFragment : Fragment() {
     ): View? {
         val view = inflater.inflate(R.layout.fragment_search, container, false)
 
-        searchEditText = view.findViewById(R.id.search_edit_text)
-        voiceSearchIcon = view.findViewById(R.id.voice_search_icon)
+        searchEditText = view.findViewById<EditText>(R.id.search_edit_text)
+        // voice search on search icon
+//        voiceSearchIcon = view.findViewById(R.id.search_result_img)
         searchResultsRecyclerView = view.findViewById(R.id.search_results_recycler_view)
 
         searchResultsRecyclerView.layoutManager = LinearLayoutManager(context)
@@ -54,7 +55,7 @@ class SearchFragment : Fragment() {
         searchResultsRecyclerView.adapter = searchAdapter
 
         setupSearchFunctionality()
-        setupVoiceSearch()
+//        setupVoiceSearch()
 
         return view
     }
@@ -103,13 +104,17 @@ class SearchFragment : Fragment() {
 
     private fun generateDummySearchResults(): List<SearchResult> {
         return listOf(
-            SearchResult(R.drawable.img_plumbing_service, "Plumbing Services", "Providing Reliable Plumbing Solutions with Precision and Care!"),
-            SearchResult(R.drawable.img_electrician_service, "Electrician Services", "Ensuring Safe and Reliable Electrical Repairs for Your Peace of Mind!"),
-            SearchResult(R.drawable.img_carpentry_service, "Carpentry Services", "Expert Carpenters Creating Beautiful and Functional Spaces!"),
-            SearchResult(R.drawable.img_painting_service, "Painting Services", "High-quality painting services by professionals."),
-            SearchResult(R.drawable.img_electronic_service, "Electronic Repair", "Ensuring Reliable and Efficient Repairs for All Your Electronics!"),
-            SearchResult(R.drawable.img_laundry_service, "Laundry Services", "Convenient and affordable laundry services."),
-            SearchResult(R.drawable.img_welder, "Welder Services", "Welding Your Ideas Together with Strength and Precision!")
+            SearchResult(R.drawable.img_plumber_service, "Plumbing Services", "email@fakedomain.net"),
+            SearchResult(R.drawable.img_gardener_service, "Gardener Services", "email@fakedomain.net"),
+            SearchResult(R.drawable.img_handyman_service, "Handyman Services", "email@fakedomain.net"),
+            SearchResult(R.drawable.img_electrician_service, "Electrician Services", "email@fakedomain.net"),
+            SearchResult(R.drawable.img_carpenter, "Carpentry Services", "email@fakedomain.net"),
+            SearchResult(R.drawable.img_painting_service, "Painting Services", "email@fakedomain.net"),
+            SearchResult(R.drawable.img_electronic_service, "Electronic Repair", "email@fakedomain.net"),
+            SearchResult(R.drawable.img_interior_designer, "Interior Designer Services", "email@fakedomain.net"),
+            SearchResult(R.drawable.img_welder, "Welder Services", "email@fakedomain.net"),
+            SearchResult(R.drawable.img_tile_installer_service, "Tile Installer Services", "email@fakedomain.net"),
+            SearchResult(R.drawable.img_paint_service, "Painter Services", "email@fakedomain.net")
         )
     }
 
