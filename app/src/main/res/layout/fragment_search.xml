@@ -3,50 +3,74 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:background="@color/background_color"
     tools:context=".Fragment.SearchFragment">
 
     <!-- Search Bar with Voice Search -->
-    <LinearLayout
+    <com.google.android.material.card.MaterialCardView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="50dp"
         android:orientation="horizontal"
         android:layout_marginTop="16dp"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
-        android:paddingTop="16dp"
-        android:paddingRight="8dp"
-        android:paddingLeft="8dp"
-        android:background="@drawable/search_background"
-        android:gravity="center_vertical">
-
-        <ImageView
-            android:layout_width="24dp"
-            android:layout_height="24dp"
-            android:src="@drawable/ic_search"
-            android:layout_marginEnd="8dp"/>
-
-        <EditText
-            android:id="@+id/search_edit_text"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:hint="Search for services, professionals..."
-            android:inputType="text"
-            android:padding="8dp"
-            android:background="@null"
-            android:textColor="@color/primary_text"/>
-
-        <ImageView
-            android:id="@+id/voice_search_icon"
-            android:layout_width="24dp"
-            android:layout_height="24dp"
-            android:src="@drawable/ic_voice_search"
-            android:layout_marginStart="8dp"/>
-    </LinearLayout>
+        app:cardCornerRadius="16dp"
+        app:strokeColor="@color/black"
+        app:strokeWidth="1dp"
+       >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="4dp"
+            >
 
 
+            <EditText
+                android:id="@+id/search_edit_text"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fontFamily="sans-serif-condensed"
+                android:inputType ="text"
+                android:maxLength="16"
+                android:paddingHorizontal="8dp"
+                android:background="@drawable/search_bar_bg"
+                />
+
+            <ImageView
+                android:id="@+id/search_result_img"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/ic_n_search_light"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:padding="4dp"
+                />
+        </RelativeLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="8dp"
+        android:layout_marginHorizontal="18dp"
+        app:strokeWidth="0dp"
+        android:paddingHorizontal="16dp"
+        app:cardCornerRadius="0dp"
+        android:backgroundTint="@color/white"
+        >
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Suggestions"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:fontFamily="sans-serif-condensed"
+            android:textColor="@color/black"
+            />
+    </com.google.android.material.card.MaterialCardView>
     <!-- RecyclerView for Search Results -->
     <androidx.recyclerview.widget.RecyclerView
         android:paddingLeft="16dp"
