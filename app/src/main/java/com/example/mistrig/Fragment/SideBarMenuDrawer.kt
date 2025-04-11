@@ -7,6 +7,9 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
+import android.widget.TextView
+import androidx.appcompat.app.AppCompatActivity
+import androidx.drawerlayout.widget.DrawerLayout
 import com.example.mistrig.R
 import kotlin.jvm.java
 
@@ -28,6 +31,14 @@ class SideBarMenuDrawer : Fragment() {
 
         msgBtn.setOnClickListener {
             startActivity(msgBoxIntent)
+        }
+
+        // settings
+        val setting = view.findViewById<TextView>(R.id.settings)
+        setting.setOnClickListener {
+            val parentFragManager = parentFragmentManager.beginTransaction()
+            parentFragManager.replace(R.id.fragment_container, SettingsFragment())
+            parentFragManager.commit()
         }
 
         return view
