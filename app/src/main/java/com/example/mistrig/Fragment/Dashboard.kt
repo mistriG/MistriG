@@ -15,7 +15,7 @@ import com.example.mistrig.R
 
 class Dashboard : Fragment() {
 
-     private val cardViewList: MutableList<CardView> = mutableListOf()
+     private var cardViewList: MutableList<CardView> = mutableListOf()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -34,32 +34,24 @@ class Dashboard : Fragment() {
         // initializing the service cards
         initCards(view)
 
-        for ((index, card) in cardViewList.withIndex()){
-            card.setOnClickListener {
+        // setting click listener on card
+        for ( (index, card) in cardViewList.withIndex()){
                 handleClick(card, index)
-            }
         }
 
 
         return view
     }
 
-    override fun onResume() {
-        super.onResume()
-        val view = requireView()
-        initCards(view)
-
-    }
-
     private fun loadFragment(fragment: Fragment) {
        requireActivity().supportFragmentManager.beginTransaction()
             .replace(R.id.fragment_container, fragment)
-           .addToBackStack(null)
+            .addToBackStack(null)
             .commit()
     }
 
     private fun initCards(view: View){
-        cardViewList += listOf<CardView>(
+        cardViewList = mutableListOf<CardView>(
             view.findViewById<CardView>(R.id.dash_cardView_1),
             view.findViewById<CardView>(R.id.dash_cardView_2),
             view.findViewById<CardView>(R.id.dash_cardView_3),
@@ -84,9 +76,19 @@ class Dashboard : Fragment() {
     }
 
     private fun handleClick(card : CardView, index : Int){
+        var serviceName : String? = null
         card.setOnClickListener {
-            Toast.makeText(requireContext(), "clicked ${serviceNameList()[index].name}", Toast.LENGTH_SHORT).show()
-            loadFragment(ServiceMap())
+            try {
+                Toast.makeText(requireContext(), "clicked ${serviceNameList()[index].name}", Toast.LENGTH_SHORT).show()
+                serviceName = serviceNameList()[index].name
+            }catch (e : Exception){
+                Toast.makeText(requireContext(),"$e", Toast.LENGTH_LONG).show()
+            }finally {
+                val bundle = Bundle()
+                bundle.putString("name", "$serviceName")
+                ServiceMap().arguments = bundle
+                loadFragment(ServiceMap())
+            }
         }
     }
 
