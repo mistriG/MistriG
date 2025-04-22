@@ -1,33 +1,27 @@
 package com.example.mistrig.Fragment
 
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
+import androidx.cardview.widget.CardView
+import com.example.mistrig.DataClass.ServiceName
+import com.example.mistrig.DataClass.serviceCardIdList
+import com.example.mistrig.DataClass.serviceNameList
 import com.example.mistrig.R
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
-
-/**
- * A simple [Fragment] subclass.
- * Use the [Dashboard.newInstance] factory method to
- * create an instance of this fragment.
- */
 class Dashboard : Fragment() {
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
+
+     private val cardViewList: MutableList<CardView> = mutableListOf()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
-        }
+        Log.d("Dashboard", "onCreate called")
+
+
     }
 
     override fun onCreateView(
@@ -35,26 +29,65 @@ class Dashboard : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_dashboard, container, false)
+        val view = inflater.inflate(R.layout.fragment_dashboard, container, false)
+
+        // initializing the service cards
+        initCards(view)
+
+        for ((index, card) in cardViewList.withIndex()){
+            card.setOnClickListener {
+                handleClick(card, index)
+            }
+        }
+
+
+        return view
     }
 
-    companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment Dashboard.
-         */
-        // TODO: Rename and change types and number of parameters
-        @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-            Dashboard().apply {
-                arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
-                }
-            }
+    override fun onResume() {
+        super.onResume()
+        val view = requireView()
+        initCards(view)
+
     }
+
+    private fun loadFragment(fragment: Fragment) {
+       requireActivity().supportFragmentManager.beginTransaction()
+            .replace(R.id.fragment_container, fragment)
+           .addToBackStack(null)
+            .commit()
+    }
+
+    private fun initCards(view: View){
+        cardViewList += listOf<CardView>(
+            view.findViewById<CardView>(R.id.dash_cardView_1),
+            view.findViewById<CardView>(R.id.dash_cardView_2),
+            view.findViewById<CardView>(R.id.dash_cardView_3),
+            view.findViewById<CardView>(R.id.dash_cardView_4),
+            view.findViewById<CardView>(R.id.dash_cardView_5),
+            view.findViewById<CardView>(R.id.dash_cardView_6),
+            view.findViewById<CardView>(R.id.dash_cardView_7),
+            view.findViewById<CardView>(R.id.dash_cardView_8),
+            view.findViewById<CardView>(R.id.dash_cardView_9),
+            view.findViewById<CardView>(R.id.dash_cardView_10),
+            view.findViewById<CardView>(R.id.dash_cardView_11),
+            view.findViewById<CardView>(R.id.dash_cardView_12),
+            view.findViewById<CardView>(R.id.dash_cardView_13),
+            view.findViewById<CardView>(R.id.dash_cardView_14),
+            view.findViewById<CardView>(R.id.dash_cardView_15),
+            view.findViewById<CardView>(R.id.dash_cardView_16),
+            view.findViewById<CardView>(R.id.dash_cardView_17),
+            view.findViewById<CardView>(R.id.dash_cardView_18),
+            view.findViewById<CardView>(R.id.dash_cardView_19),
+            view.findViewById<CardView>(R.id.dash_cardView_20)
+        )
+    }
+
+    private fun handleClick(card : CardView, index : Int){
+        card.setOnClickListener {
+            Toast.makeText(requireContext(), "clicked ${serviceNameList()[index].name}", Toast.LENGTH_SHORT).show()
+            loadFragment(ServiceMap())
+        }
+    }
+
 }
