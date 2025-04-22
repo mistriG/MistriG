@@ -201,11 +201,9 @@
                     android:padding="4dp">
 
                     <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/dash_cardView_1"
                         android:layout_width="match_parent"
-                        android:layout_height="120dp"
-                        app:cardCornerRadius="8dp"
-                        app:strokeColor="@color/black"
-                        app:strokeWidth="2dp">
+                        android:layout_height="120dp">
 
                         <ImageView
                             android:layout_width="match_parent"
@@ -235,11 +233,10 @@
                     android:padding="4dp">
 
                     <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/dash_cardView_2"
                         android:layout_width="match_parent"
                         android:layout_height="120dp"
-                        app:cardCornerRadius="8dp"
-                        app:strokeColor="@color/black"
-                        app:strokeWidth="2dp">
+                        app:cardCornerRadius="8dp">
 
                         <ImageView
                             android:layout_width="match_parent"
@@ -276,11 +273,10 @@
                     android:padding="4dp">
 
                     <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/dash_cardView_3"
                         android:layout_width="match_parent"
                         android:layout_height="120dp"
-                        app:cardCornerRadius="8dp"
-                        app:strokeColor="@color/black"
-                        app:strokeWidth="2dp">
+                        app:cardCornerRadius="8dp">
 
                         <ImageView
                             android:layout_width="match_parent"
@@ -310,11 +306,10 @@
                     android:padding="4dp">
 
                     <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/dash_cardView_4"
                         android:layout_width="match_parent"
                         android:layout_height="120dp"
-                        app:cardCornerRadius="8dp"
-                        app:strokeColor="@color/black"
-                        app:strokeWidth="2dp">
+                        app:cardCornerRadius="8dp">
 
                         <ImageView
                             android:layout_width="match_parent"
@@ -350,11 +345,10 @@
                     android:padding="4dp">
 
                     <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/dash_cardView_5"
                         android:layout_width="match_parent"
                         android:layout_height="120dp"
-                        app:cardCornerRadius="8dp"
-                        app:strokeColor="@color/black"
-                        app:strokeWidth="2dp">
+                        app:cardCornerRadius="8dp">
 
                         <ImageView
                             android:layout_width="match_parent"
@@ -385,11 +379,10 @@
                     android:padding="4dp">
 
                     <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/dash_cardView_6"
                         android:layout_width="match_parent"
                         android:layout_height="120dp"
-                        app:cardCornerRadius="8dp"
-                        app:strokeColor="@color/black"
-                        app:strokeWidth="2dp">
+                        app:cardCornerRadius="8dp">
 
                         <ImageView
                             android:layout_width="match_parent"
@@ -426,11 +419,10 @@
                     android:padding="4dp">
 
                     <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/dash_cardView_7"
                         android:layout_width="match_parent"
                         android:layout_height="120dp"
-                        app:cardCornerRadius="8dp"
-                        app:strokeColor="@color/black"
-                        app:strokeWidth="2dp">
+                        app:cardCornerRadius="8dp">
 
                         <ImageView
                             android:layout_width="match_parent"
@@ -461,11 +453,10 @@
                     android:padding="4dp">
 
                     <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/dash_cardView_8"
                         android:layout_width="match_parent"
                         android:layout_height="120dp"
-                        app:cardCornerRadius="8dp"
-                        app:strokeColor="@color/black"
-                        app:strokeWidth="2dp">
+                        app:cardCornerRadius="8dp">
 
                         <ImageView
                             android:layout_width="match_parent"
@@ -502,11 +493,10 @@
                     android:padding="4dp">
 
                     <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/dash_cardView_9"
                         android:layout_width="match_parent"
                         android:layout_height="120dp"
-                        app:cardCornerRadius="8dp"
-                        app:strokeColor="@color/black"
-                        app:strokeWidth="2dp">
+                        app:cardCornerRadius="8dp">
 
                         <ImageView
                             android:layout_width="match_parent"
@@ -537,11 +527,10 @@
                     android:padding="4dp">
 
                     <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/dash_cardView_10"
                         android:layout_width="match_parent"
                         android:layout_height="120dp"
-                        app:cardCornerRadius="8dp"
-                        app:strokeColor="@color/black"
-                        app:strokeWidth="2dp">
+                        app:cardCornerRadius="8dp">
 
                         <ImageView
                             android:layout_width="match_parent"
@@ -579,11 +568,10 @@
                     android:padding="4dp">
 
                     <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/dash_cardView_11"
                         android:layout_width="match_parent"
                         android:layout_height="120dp"
-                        app:cardCornerRadius="8dp"
-                        app:strokeColor="@color/black"
-                        app:strokeWidth="2dp">
+                        app:cardCornerRadius="8dp">
 
                         <ImageView
                             android:layout_width="match_parent"
@@ -614,11 +602,10 @@
                     android:padding="4dp">
 
                     <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/dash_cardView_12"
                         android:layout_width="match_parent"
                         android:layout_height="120dp"
-                        app:cardCornerRadius="8dp"
-                        app:strokeColor="@color/black"
-                        app:strokeWidth="2dp">
+                        app:cardCornerRadius="8dp">
 
                         <ImageView
                             android:layout_width="match_parent"
@@ -654,11 +641,10 @@
                     android:padding="4dp">
 
                     <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/dash_cardView_13"
                         android:layout_width="match_parent"
                         android:layout_height="120dp"
-                        app:cardCornerRadius="8dp"
-                        app:strokeColor="@color/black"
-                        app:strokeWidth="2dp">
+                        app:cardCornerRadius="8dp">
 
                         <ImageView
                             android:layout_width="match_parent"
@@ -689,11 +675,10 @@
                     android:padding="4dp">
 
                     <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/dash_cardView_14"
                         android:layout_width="match_parent"
                         android:layout_height="120dp"
-                        app:cardCornerRadius="8dp"
-                        app:strokeColor="@color/black"
-                        app:strokeWidth="2dp">
+                        app:cardCornerRadius="8dp">
 
                         <ImageView
                             android:layout_width="match_parent"
@@ -730,11 +715,10 @@
                     android:padding="4dp">
 
                     <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/dash_cardView_15"
                         android:layout_width="match_parent"
                         android:layout_height="120dp"
-                        app:cardCornerRadius="8dp"
-                        app:strokeColor="@color/black"
-                        app:strokeWidth="2dp">
+                        app:cardCornerRadius="8dp">
 
                         <ImageView
                             android:layout_width="match_parent"
@@ -765,11 +749,10 @@
                     android:padding="4dp">
 
                     <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/dash_cardView_16"
                         android:layout_width="match_parent"
                         android:layout_height="120dp"
-                        app:cardCornerRadius="8dp"
-                        app:strokeColor="@color/black"
-                        app:strokeWidth="2dp">
+                        app:cardCornerRadius="8dp">
 
                         <ImageView
                             android:layout_width="match_parent"
@@ -806,11 +789,10 @@
                     android:padding="4dp">
 
                     <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/dash_cardView_17"
                         android:layout_width="match_parent"
                         android:layout_height="120dp"
-                        app:cardCornerRadius="8dp"
-                        app:strokeColor="@color/black"
-                        app:strokeWidth="2dp">
+                        app:cardCornerRadius="8dp">
 
                         <ImageView
                             android:layout_width="match_parent"
@@ -841,11 +823,10 @@
                     android:padding="4dp">
 
                     <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/dash_cardView_18"
                         android:layout_width="match_parent"
                         android:layout_height="120dp"
-                        app:cardCornerRadius="8dp"
-                        app:strokeColor="@color/black"
-                        app:strokeWidth="2dp">
+                        app:cardCornerRadius="8dp">
 
                         <ImageView
                             android:layout_width="match_parent"
@@ -889,11 +870,10 @@
                         android:padding="4dp">
 
                         <com.google.android.material.card.MaterialCardView
+                            android:id="@+id/dash_cardView_19"
                             android:layout_width="match_parent"
                             android:layout_height="120dp"
-                            app:cardCornerRadius="8dp"
-                            app:strokeColor="@color/black"
-                            app:strokeWidth="2dp">
+                            app:cardCornerRadius="8dp">
 
                             <ImageView
                                 android:layout_width="match_parent"
@@ -924,11 +904,10 @@
                         android:padding="4dp">
 
                         <com.google.android.material.card.MaterialCardView
+                            android:id="@+id/dash_cardView_20"
                             android:layout_width="match_parent"
                             android:layout_height="120dp"
-                            app:cardCornerRadius="8dp"
-                            app:strokeColor="@color/black"
-                            app:strokeWidth="2dp">
+                            app:cardCornerRadius="8dp">
 
                             <ImageView
                                 android:layout_width="match_parent"
