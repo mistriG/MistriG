@@ -1,3 +1,6 @@
+import java.util.Properties
+import java.io.FileInputStream
+
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
@@ -16,6 +19,20 @@ android {
         versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+
+        // Load properties from local.properties
+        val properties = Properties()
+        val localPropertiesFile = rootProject.file("local.properties")
+        if (localPropertiesFile.exists()) {
+            FileInputStream(localPropertiesFile).use { properties.load(it) }
+        }
+
+        // Access the API key  and define it as a build config field
+        val mapsApiKey = properties.getProperty("MAPS_API_KEY") ?: "DEFAULT_API_KEY_IF_NOT_FOUND"
+        // Define the manifest placeholder
+        manifestPlaceholders["MAPS_API_KEY"] = mapsApiKey
+
+        buildConfigField("String", "MAPS_API_KEY", "\"$mapsApiKey\"")
     }
 
     buildTypes {
@@ -36,10 +53,14 @@ android {
     }
     buildFeatures {
         viewBinding = true
+        buildConfig = true
     }
 }
 
 dependencies {
+    // google map service
+    implementation ("com.google.android.gms:play-services-maps:18.2.0")
+
     // 🔹 AndroidX Core Libraries
     implementation("androidx.core:core-ktx:1.12.0")
     implementation("androidx.appcompat:appcompat:1.6.1")
@@ -74,6 +95,7 @@ dependencies {
 
     // ✅ Bottom Navigation
     implementation("np.com.susanthapa:curved_bottom_navigation:0.6.5")
+    implementation(libs.play.services.maps)
 
     // 🔹 Testing Dependencies
     testImplementation("junit:junit:4.13.2")
