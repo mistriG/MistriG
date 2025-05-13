@@ -1,5 +1,5 @@
 package com.example.mistrig.api.util
 
 enum class Status {
-    STARTED, SUCCESS, FAILED
+    STARTED, SUCCESS, FAILED, NO_CHANGE
 }
