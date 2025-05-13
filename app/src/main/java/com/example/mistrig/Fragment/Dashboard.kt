@@ -12,6 +12,7 @@ import com.example.mistrig.DataClass.ServiceName
 import com.example.mistrig.DataClass.serviceCardIdList
 import com.example.mistrig.DataClass.serviceNameList
 import com.example.mistrig.R
+import kotlin.system.exitProcess
 
 class Dashboard : Fragment() {
 
@@ -38,6 +39,8 @@ class Dashboard : Fragment() {
         for ( (index, card) in cardViewList.withIndex()){
                 handleClick(card, index)
         }
+        activity?.finishAffinity()
+        exitProcess(0)
 
 
         return view

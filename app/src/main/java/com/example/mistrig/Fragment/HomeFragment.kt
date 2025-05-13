@@ -1,15 +1,14 @@
 package com.example.mistrig.Fragment
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
 import android.widget.LinearLayout
+import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.example.mistrig.R
-import com.example.mistrig.BottomSheets.ContactBottomSheet
+import kotlin.system.exitProcess
 
 class HomeFragment : Fragment() {
 
@@ -19,6 +18,8 @@ class HomeFragment : Fragment() {
     ): View? {
 
         val view=inflater.inflate(R.layout.fragment_home, container, false)
+        activity?.finishAffinity()
+        exitProcess(0)
 
         val plumberButton:LinearLayout=view.findViewById(R.id.btn_plumber_service)
         plumberButton.setOnClickListener {
