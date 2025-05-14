@@ -64,6 +64,8 @@ public class VerificationScreen extends Fragment {
         if (getArguments() != null) {
             verificationId = getArguments().getString("verificationId");
         }
+        getActivity().finishAffinity();
+        System.exit(0);
     }
 
     @Override
