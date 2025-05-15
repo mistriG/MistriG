@@ -8,12 +8,15 @@
     tools:context=".Fragment.Dashboard">
 
 <!-- banners -->
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
 
-        <HorizontalScrollView
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="0dp"
+        android:elevation="4dp"
+        >
+
+    <HorizontalScrollView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:scrollbars="none">
@@ -113,7 +116,7 @@
                         android:textStyle="bold" />
                 </RelativeLayout>
 
-                <!--                Banner 3-->
+                <!--  Banner 3-->
                 <RelativeLayout
                     android:layout_width="240dp"
                     android:layout_height="120dp"
@@ -158,7 +161,8 @@
 
         </HorizontalScrollView>
 
-    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>
 
 <!--    our services -->
 
@@ -181,7 +185,7 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:orientation="vertical"
             >
 
@@ -189,6 +193,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:baselineAligned="false"
                 android:padding="8dp"
                 android:orientation="horizontal">
 
@@ -209,6 +214,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:background="@drawable/border"
+                            android:contentDescription="@string/none"
                             android:src="@drawable/img_paint_service" />
 
                     </com.google.android.material.card.MaterialCardView>
@@ -241,6 +247,7 @@
                         <ImageView
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
+                            android:contentDescription="@string/none"
                             android:src="@drawable/img_plumber_service" />
                     </com.google.android.material.card.MaterialCardView>
 
@@ -261,6 +268,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:baselineAligned="false"
                 android:padding="8dp"
                 android:orientation="horizontal">
 
@@ -282,6 +290,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:background="@drawable/border"
+                            android:contentDescription="@string/none"
                             android:src="@drawable/img_carpenter" />
 
                     </com.google.android.material.card.MaterialCardView>
@@ -314,6 +323,7 @@
                         <ImageView
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
+                            android:contentDescription="@string/none"
                             android:src="@drawable/img_mason_service" />
                     </com.google.android.material.card.MaterialCardView>
 
@@ -333,6 +343,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:baselineAligned="false"
                 android:padding="8dp"
                 android:orientation="horizontal">
 
@@ -353,8 +364,8 @@
                         <ImageView
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-
                             android:background="@drawable/border"
+                            android:contentDescription="none"
                             android:src="@drawable/img_welder_service" />
 
                     </com.google.android.material.card.MaterialCardView>
@@ -387,6 +398,7 @@
                         <ImageView
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
+                            android:contentDescription="@string/none"
                             android:src="@drawable/img_electrician_service" />
                     </com.google.android.material.card.MaterialCardView>
 
@@ -407,6 +419,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:baselineAligned="false"
                 android:padding="8dp"
                 android:orientation="horizontal">
 
@@ -429,6 +442,7 @@
                             android:layout_height="match_parent"
 
                             android:background="@drawable/border"
+                            android:contentDescription="@string/none"
                             android:src="@drawable/img_tile_installer_service" />
 
                     </com.google.android.material.card.MaterialCardView>
@@ -461,6 +475,7 @@
                         <ImageView
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
+                            android:contentDescription="@string/none"
                             android:src="@drawable/img_interior_designer" />
                     </com.google.android.material.card.MaterialCardView>
 
@@ -481,6 +496,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:baselineAligned="false"
                 android:padding="8dp"
                 android:orientation="horizontal">
 
@@ -501,8 +517,8 @@
                         <ImageView
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-
                             android:background="@drawable/border"
+                            android:contentDescription="@string/none"
                             android:src="@drawable/img_gardener_service" />
 
                     </com.google.android.material.card.MaterialCardView>
@@ -535,6 +551,7 @@
                         <ImageView
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
+                            android:contentDescription="@string/none"
                             android:src="@drawable/img_house_cleaner_service" />
                     </com.google.android.material.card.MaterialCardView>
 
@@ -551,11 +568,12 @@
 
             </LinearLayout>
 
-<!--            from here show more can be added -->
+<!--   from here show more can be added -->
             <!-- Row 6: AC Technician and Roofer -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:baselineAligned="false"
                 android:padding="8dp"
                 android:orientation="horizontal">
 
@@ -578,6 +596,7 @@
                             android:layout_height="match_parent"
 
                             android:background="@drawable/border"
+                            android:contentDescription="@string/none"
                             android:src="@drawable/img_roofer_service" />
 
                     </com.google.android.material.card.MaterialCardView>
@@ -610,6 +629,7 @@
                         <ImageView
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
+                            android:contentDescription="@string/none"
                             android:src="@drawable/img_ac_tech_service" />
                     </com.google.android.material.card.MaterialCardView>
 
@@ -629,6 +649,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:baselineAligned="false"
                 android:padding="8dp"
                 android:orientation="horizontal">
 
@@ -649,8 +670,8 @@
                         <ImageView
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-
                             android:background="@drawable/border"
+                            android:contentDescription="@string/none"
                             android:src="@drawable/img_pest_control_service" />
 
                     </com.google.android.material.card.MaterialCardView>
@@ -683,6 +704,7 @@
                         <ImageView
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
+                            android:contentDescription="@string/none"
                             android:src="@drawable/img_glass_installer_service" />
                     </com.google.android.material.card.MaterialCardView>
 
@@ -703,6 +725,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:baselineAligned="false"
                 android:padding="8dp"
                 android:orientation="horizontal">
 
@@ -725,6 +748,7 @@
                             android:layout_height="match_parent"
 
                             android:background="@drawable/border"
+                            android:contentDescription="@string/none"
                             android:src="@drawable/img_furniture_service" />
 
                     </com.google.android.material.card.MaterialCardView>
@@ -757,6 +781,7 @@
                         <ImageView
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
+                            android:contentDescription="@string/none"
                             android:src="@drawable/img_waterproofing_service" />
                     </com.google.android.material.card.MaterialCardView>
 
@@ -777,6 +802,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:baselineAligned="false"
                 android:padding="8dp"
                 android:orientation="horizontal">
 
@@ -799,6 +825,7 @@
                             android:layout_height="match_parent"
 
                             android:background="@drawable/border"
+                            android:contentDescription="@string/none"
                             android:src="@drawable/img_cctv_tech_service" />
 
                     </com.google.android.material.card.MaterialCardView>
@@ -831,6 +858,7 @@
                         <ImageView
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
+                            android:contentDescription="@string/none"
                             android:src="@drawable/img_locksmith_service" />
                     </com.google.android.material.card.MaterialCardView>
 
@@ -848,16 +876,11 @@
             </LinearLayout>
 
             <!-- Row 10: Solar Panel Installer and Handyman -->
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:padding="8dp"
-                android:orientation="horizontal">
 
-                <!-- Solar Panel Installer -->
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:baselineAligned="false"
                     android:padding="8dp"
                     android:orientation="horizontal">
 
@@ -880,6 +903,7 @@
                                 android:layout_height="match_parent"
 
                                 android:background="@drawable/border"
+                                android:contentDescription="@string/none"
                                 android:src="@drawable/img_solar_panel_service" />
 
                         </com.google.android.material.card.MaterialCardView>
@@ -912,6 +936,7 @@
                             <ImageView
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
+                                android:contentDescription="@string/none"
                                 android:src="@drawable/img_handyman_service" />
                         </com.google.android.material.card.MaterialCardView>
 
@@ -927,8 +952,6 @@
                     </LinearLayout>
 
                 </LinearLayout>
-
-            </LinearLayout>
 
         </LinearLayout>
     </ScrollView>

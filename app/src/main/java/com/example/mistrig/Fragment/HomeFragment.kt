@@ -18,8 +18,6 @@ class HomeFragment : Fragment() {
     ): View? {
 
         val view=inflater.inflate(R.layout.fragment_home, container, false)
-        activity?.finishAffinity()
-        exitProcess(0)
 
         val plumberButton:LinearLayout=view.findViewById(R.id.btn_plumber_service)
         plumberButton.setOnClickListener {

@@ -39,8 +39,6 @@ class Dashboard : Fragment() {
         for ( (index, card) in cardViewList.withIndex()){
                 handleClick(card, index)
         }
-        activity?.finishAffinity()
-        exitProcess(0)
 
 
         return view
