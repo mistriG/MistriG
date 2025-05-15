@@ -31,8 +31,6 @@ public class VerificationScreen extends Fragment {
     private EditText[] otpInputs = new EditText[6];
     private Button btnContinue;
     private TextView txtResend;
-
-
     private String verificationId;
 
     public VerificationScreen() {
