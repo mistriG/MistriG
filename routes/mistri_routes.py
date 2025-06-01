@@ -1,4 +1,4 @@
-from fastapi import APIRouter, HTTPException
+from fastapi import APIRouter, HTTPException, Depends
 from database import db
 from models import Mistri
 from schemas import MistriOut
@@ -8,6 +8,7 @@ from database import db  # MongoDB connection
 from bson import ObjectId
 from models import Field
 from schemas import FieldOut
+from bson import ObjectId
 
 router = APIRouter()
 
@@ -52,20 +53,29 @@ def update_availability(data: Availability):
     )
     return {"msg": "Availability updated"}
 
-@router.get("/mistri/ratings/{email}")
+@router.get("/user/mistri/ratings/{email}")
 def get_mistri_ratings(email: str):
-    mistri = db.mistris.find_one({"email": email}, {"ratings": 1, "name": 1})
+    mistri = db.mistris.find_one({"email": email})
     if not mistri:
         raise HTTPException(status_code=404, detail="Mistri not found")
 
-    ratings = mistri.get("ratings", [])
-    avg_rating = round(sum(ratings) / len(ratings), 2) if ratings else None
+    mistri["_id"] = str(mistri["_id"])
+    mistri.pop("password", None)
+    return mistri
 
-    return {
-        "name": mistri.get("name", ""),
-        "email": email,
-        "ratings": ratings,
-        "average_rating": avg_rating,
-        "total_ratings": len(ratings)
-    }
+@router.get("/mistri/bookings/{email}")
+def get_mistri_bookings(email: str):
+    bookings = list(db.bookings.find({"mistri_email": email}))
+    for b in bookings:
+        b["_id"] = str(b["_id"])
+    return bookings
 
+@router.patch("/mistri/booking/{booking_id}/status")
+def update_work_done_status(booking_id: str, work_done: bool):
+    result = db.bookings.update_one(
+        {"_id": ObjectId(booking_id)},
+        {"$set": {"work_done": work_done}}
+    )
+    if result.matched_count == 0:
+        raise HTTPException(status_code=404, detail="Booking not found")
+    return {"msg": f"Booking work_done updated to {work_done}"}

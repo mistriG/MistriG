@@ -1,7 +1,7 @@
 from fastapi import APIRouter, HTTPException
 from database import db
 from models import Mistri
-from schemas import MistriOut
+from schemas import MistriOut, UserOut
 from fastapi import APIRouter, HTTPException
 from pydantic import BaseModel
 from database import db  # MongoDB connection
@@ -19,14 +19,17 @@ def add_field(field: Field):
 def get_fields():
     return list(db.fields.find({}, {"_id": 0}))
 
-@router.get("/admin/users")
+@router.get("/admin/users", response_model=list[UserOut])
 def get_all_users():
     users = db.users.find()
     return [
         {
             "_id": str(user.get("_id")),
+            "user_id": user.get("user_id"),
             "name": user.get("name"),
             "email": user.get("email"),
+            "phone_number": user.get("phone_number"),
+            "picture": user.get("picture"),
             "role": user.get("role", "user")
         }
         for user in users
@@ -37,12 +40,19 @@ def get_all_mistris():
     mistris = list(db.mistris.find())
     return [
         {
-            "name": m["name"],
-            "email": m["email"],
-            "mobile": m["mobile"],
-            "expertise":[m["field_of_expertise"]], # string like "Cleaning"
-            "price_per_day": m["price"],
-            "description": m["description"]
+            "_id": str(m.get("_id")),
+            "user_id": m.get("user_id"),
+            "name": m.get("name"),
+            "email": m.get("email"),
+            "mobile": m.get("mobile"),
+            "field_of_expertise": m.get("field_of_expertise"),
+            "price": m.get("price"),
+            "description": m.get("description"),
+            "picture": m.get("picture"),
+            "role": m.get("role", "mistri"),
+            "ratings": m.get("ratings", {"average": 0.0, "count": 0}),
+            "location": m.get("location", {"lat": 0, "lng": 0}),
+            "available": m.get("available", False)  
         }
         for m in mistris
     ]
