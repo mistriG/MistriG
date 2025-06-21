@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>WebRTC Call with Mic Visualizer</title>
+  <style>
+    body { font-family: sans-serif; padding: 20px; }
+    video { width: 300px; margin: 10px; border: 1px solid #ccc; }
+    #micMeter { border: 1px solid black; margin-top: 10px; }
+  </style>
+</head>
+<body>
+  <h2>WebRTC Video Call with Mic Level</h2>
+
+  <!-- Target Input -->
+  <input id="targetIdInput" placeholder="Enter target user ID" />
+  <button onclick="startCall()">Start Call</button>
+
+  <!-- Video Elements -->
+  <div>
+    <video id="localVideo" autoplay muted playsinline></video>
+    <video id="remoteVideo" autoplay playsinline></video>
+  </div>
+
+  <!-- Mic Visualizer -->
+  <canvas id="micMeter" width="300" height="20"></canvas>
+
+  <script>
+    let pendingCandidates = [];
+
+    const userId = prompt("Enter your user ID:");
+    const targetInput = document.getElementById("targetIdInput");
+    const ws = new WebSocket("ws://localhost:8000/ws/" + userId);
+
+    let peer;
+    let localStream;
+
+    // Handle WebSocket messages
+    ws.onmessage = async (event) => {
+      const data = JSON.parse(event.data);
+      if (data.type === "offer") {
+        await handleOffer(data);
+      } else if (data.type === "answer") {
+        await peer.setRemoteDescription(new RTCSessionDescription(data.sdp));
+      } else if (data.type === "candidate") {
+        await peer.addIceCandidate(new RTCIceCandidate(data.candidate));
+      }
+    };
+
+    ws.onopen = () => console.log("✅ WebSocket connected");
+    ws.onerror = (e) => console.error("WebSocket error:", e);
+    ws.onclose = () => console.warn("❌ WebSocket closed");
+
+    async function startCall() {
+        const targetId = targetInput.value;
+        if (!targetId) return alert("Enter target ID");
+
+        peer = createPeer(targetId);
+
+        if (!localStream || localStream.getTracks().length === 0) {
+            localStream = await navigator.mediaDevices.getUserMedia({ video: true, audio: true });
+            document.getElementById("localVideo").srcObject = localStream;
+            startMicVisualizer(localStream);
+        }
+
+        localStream.getTracks().forEach(track => peer.addTrack(track, localStream));
+
+        const offer = await peer.createOffer();
+        await peer.setLocalDescription(offer);
+
+        if (ws.readyState === WebSocket.OPEN) {
+            ws.send(JSON.stringify({ type: "offer", sdp: offer, target_id: targetId }));
+        }
+    }
+
+
+    function createPeer(targetId) {
+      const peer = new RTCPeerConnection();
+      peer.onicecandidate = (event) => {
+        if (event.candidate && ws.readyState === WebSocket.OPEN) {
+          ws.send(JSON.stringify({ type: "candidate", candidate: event.candidate, target_id: targetId }));
+        }
+      };
+      peer.ontrack = (event) => {
+        document.getElementById("remoteVideo").srcObject = event.streams[0];
+      };
+      return peer;
+    }
+
+    async function handleOffer(data) {
+        const fromId = data.sender_id || userId;
+        peer = createPeer(fromId);
+
+        // ✅ Only get media if it hasn't already been obtained
+        if (!localStream || localStream.getTracks().length === 0) {
+            localStream = await navigator.mediaDevices.getUserMedia({ video: true, audio: true });
+            document.getElementById("localVideo").srcObject = localStream;
+            startMicVisualizer(localStream);
+        }
+
+
+        // ✅ Add all local tracks to the peer connection
+        localStream.getTracks().forEach(track => peer.addTrack(track, localStream));
+
+        // ✅ Set remote description from received offer
+        await peer.setRemoteDescription(new RTCSessionDescription(data.sdp));
+
+        // ✅ Create and send answer back
+        const answer = await peer.createAnswer();
+        await peer.setLocalDescription(answer);
+
+        if (ws.readyState === WebSocket.OPEN) {
+            ws.send(JSON.stringify({ type: "answer", sdp: answer, target_id: fromId }));
+        }
+    }
+
+
+    // 🔊 Mic Level Visualizer
+    function startMicVisualizer(stream) {
+      const audioContext = new (window.AudioContext || window.webkitAudioContext)();
+      const micSource = audioContext.createMediaStreamSource(stream);
+      const analyser = audioContext.createAnalyser();
+      analyser.fftSize = 256;
+
+      const dataArray = new Uint8Array(analyser.frequencyBinCount);
+      micSource.connect(analyser);
+
+      const canvas = document.getElementById("micMeter");
+      const ctx = canvas.getContext("2d");
+
+      function draw() {
+        requestAnimationFrame(draw);
+        analyser.getByteFrequencyData(dataArray);
+        const volume = dataArray.reduce((a, b) => a + b, 0) / dataArray.length;
+
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        ctx.fillStyle = volume > 50 ? "#4caf50" : "#ccc";
+        ctx.fillRect(0, 0, volume * 2.5, canvas.height);
+      }
+
+      draw();
+    }
+    ws.onmessage = async (event) => {
+        const data = JSON.parse(event.data);
+        if (data.type === "offer") {
+            await handleOffer(data);
+        } else if (data.type === "answer") {
+            await peer.setRemoteDescription(new RTCSessionDescription(data.sdp));
+            // Apply any pending candidates
+            pendingCandidates.forEach(c => peer.addIceCandidate(new RTCIceCandidate(c)));
+            pendingCandidates = [];
+        } else if (data.type === "candidate") {
+            if (peer.remoteDescription) {
+            await peer.addIceCandidate(new RTCIceCandidate(data.candidate));
+            } else {
+            // Buffer it until remote description is ready
+            pendingCandidates.push(data.candidate);
+            }
+        }
+    };
+
+  </script>
+</body>
+</html>
